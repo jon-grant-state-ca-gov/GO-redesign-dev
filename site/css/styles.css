@@ -61,8 +61,10 @@
 
 .cards {
   padding: 0;
-  font-size: 0.85em;
+  font-size: 0.85rem;
+
   --card-spacing: 1.5rem;
+
   :has(.action:focus) img,
   :has(.action:hover) img,
   :has(.card-text:focus) img {
@@ -114,19 +116,19 @@
 
   .action {
     --outline-color: var(--brand-primary);
+
     background: var(--brand-primary);
     color: white;
     display: inline-block;
     margin: var(--card-spacing);
-    margin-block-start: 0;
-    margin-block-end: 1.5rem;
+    margin-block: 0 1.5rem;
     padding-block: 0.55rem;
     padding-inline: 1.5rem;
     border-radius: calc(var(--radius) * 1.5);
     text-decoration: none;
     transition: box-shadow 0.3 ease-out;
     box-shadow: var(--shadow);
-    align-self: start; /*not full width button*/
+    align-self: start; /* not full width button */
     order: 3;
     margin-top: auto;
 
@@ -136,6 +138,7 @@
       background: var(--action-hover);
       transform: scale(1.06);
     }
+
     &:active {
       transform: scale(0.95);
       background: var(--action-active);
@@ -152,10 +155,6 @@
   }
 
   &[data-orientation^="media-"] {
-    > li {
-      display: block;
-    }
-
     > li {
       display: flex;
       flex-direction: row;
