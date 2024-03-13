@@ -1,10 +1,11 @@
+/* stylelint-disable-next-line selector-max-universal */
 * {
   box-sizing: border-box;
   margin: 0;
 }
 
 :root {
-  /*colors */
+  /* colors */
   --brand-primary: #00618d;
   --brand-secondary: #13394b;
   --background-light: #d5d4c6;
@@ -13,19 +14,20 @@
   --action-hover: #278fc0;
   --action-active: #13394b;
 
-  --grey: #cccccc;
+  /* greys */
+  --grey: #ccc;
   --grey-text: #323232;
-  --grey-background: #eeeeee;
+  --grey-background: #eee;
 
-  /*Tokens*/
+  /* Tokens */
   --gutter-gap: 1.674vw;
   --flow-space: 1rem;
   --radius: 1rem;
-  --shadow: 0.2rem 0.2rem 0.5em 0 rgba(0, 0, 0, 0.25);
-  --shadow-focus: 0.1rem 0.1rem 0.25em 0 rgba(0, 0, 0, 0.1);
-  --shadow-active: 0.2rem 0.2rem 0.5em 0 rgba(0, 0, 0, 0.6);
+  --shadow: 0.2rem 0.2rem 0.5rem 0 rgba(0, 0, 0, 25%);
+  --shadow-focus: 0.1rem 0.1rem 0.25rem 0 rgba(0, 0, 0, 10%);
+  --shadow-active: 0.2rem 0.2rem 0.5rem 0 rgba(0, 0, 0, 60%);
 
-  /* Change this for overall font size*/
+  /* Change this for overall font size */
   --fontSize: 1rem;
 
   /* Font characteristics */
@@ -33,17 +35,18 @@
   --ratio: 1.24;
   --s0: calc(var(--fontSize) - 0.3rem) + 0.2vw;
 
-  /* Typography calculations, please do not change*/
+  /* Typography calculations, please do not change */
 
-  /*Small-text to allow for more control*/
+  /* Small-text to allow for more control */
   --st: calc(var(--s0) * var(--ratio));
 
-  /*The font size of standard paragraph text */
+  /* The font size of standard paragraph text */
   --base: calc(var(--st) * var(--ratio));
 
-  /*()Lead-text to allow for more control*/
+  /* ()Lead-text to allow for more control */
   --lt: calc(var(--base) * var(--ratio));
 
+  /* h6 */
   --h6: calc(var(--s0) * var(--ratio));
   --h5: calc(var(--h6) * var(--ratio));
   --h4: calc(var(--h5) * var(--ratio));
