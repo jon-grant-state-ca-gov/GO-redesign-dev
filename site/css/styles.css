@@ -58,6 +58,33 @@
 /* --------------------- */
 
 /*   Cards               */
+main {
+  padding: 10rem 0;
+}
+
+/* Focus Styles | thanks Stephanie Eckles */
+
+:is(a, button, input, textarea, summary) {
+  --outline-size: max(2px, 0.08rem);
+  --outline-style: solid;
+  --outline-color: currentcolor;
+
+  &:focus {
+    outline: var(--outline-size) var(--outline-style) var(--outline-color);
+    outline-offset: var(--outline-offset, var(--outline-size));
+
+    &:not(:focus-visible) {
+      outline: none;
+    }
+  }
+
+  &:focus-visible {
+    outline: var(--outline-size) var(--outline-style) var(--outline-color);
+    outline-offset: var(--outline-offset, var(--outline-size));
+  }
+}
+
+/*   Cards            */
 
 .cards {
   padding: 0;
@@ -154,6 +181,23 @@
     }
   }
 
+  &[data-orientation="media-end"] {
+    > li {
+      flex-direction: row-reverse;
+    }
+
+    & img {
+      border-start-start-radius: 0;
+      border-start-end-radius: var(--radius);
+      border-end-start-radius: 0;
+      border-end-end-radius: var(--radius);
+    }
+
+    .card-text {
+      flex-grow: 2;
+    }
+  }
+
   &[data-orientation^="media-"] {
     > li {
       display: flex;
@@ -177,23 +221,6 @@
     }
   }
 
-  &[data-orientation="media-end"] {
-    > li {
-      flex-direction: row-reverse;
-    }
-
-    & img {
-      border-start-start-radius: 0;
-      border-start-end-radius: var(--radius);
-      border-end-start-radius: 0;
-      border-end-end-radius: var(--radius);
-    }
-
-    .card-text {
-      flex-grow: 2;
-    }
-  }
-
   &[data-action="interactive"] {
     > li {
       box-shadow: var(--shadow);
@@ -201,30 +228,54 @@
       transition: all 0.3s ease-out;
       justify-content: start;
       position: relative;
+
+      &:focus-within {
+        --outline-size: max(2px, 0.08em);
+        --outline-style: solid;
+        outline: var(--outline-size) var(--outline-style) var(--brand-primary);
+        outline-offset: var(--outline-offset, var(--outline-size));
+
+        a:focus {
+          outline: none;
+        }
+
+        & img {
+          filter: saturate(100%);
+        }
+      }
+
+      > a {
+        display: block;
+        color: currentColor;
+        text-decoration: none;
+        border-radius: var(--radius);
+        height: 100%;
+        --outline-color: var(--brand-primary);
+      }
+
+      &:hover,
+      &:focus {
+        transform: scale(1.04);
+        box-shadow: var(--shadow-focus);
+
+        & img {
+          filter: saturate(100%);
+        }
+      }
+
+      &:active {
+        transform: scale(1.02);
+      }
     }
 
     .card-text a::before {
       content: "";
       position: absolute;
-      top: 0px;
-      right: 0px;
-      bottom: 0px;
-      left: 0px;
-      z-index: 3000; /*for Chrome and Edge to allow anchor over the img*/
-    }
-    > li:focus-within {
-      --outline-size: max(2px, 0.08em);
-      --outline-style: solid;
-      outline: var(--outline-size) var(--outline-style) var(--brand-primary);
-      outline-offset: var(--outline-offset, var(--outline-size));
-
-      a:focus {
-        outline: none;
-      }
-
-      & img {
-        filter: saturate(100%);
-      }
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 3000; /* for Chrome and Edge to allow anchor over the img */
     }
 
     h2 > a {
@@ -234,29 +285,6 @@
 
     img {
       margin-block-start: unset;
-    }
-
-    > li > a {
-      display: block;
-      color: currentColor;
-      text-decoration: none;
-      border-radius: var(--radius);
-      height: 100%;
-      --outline-color: var(--brand-primary);
-    }
-
-    > li:hover,
-    > li:focus {
-      transform: scale(1.04);
-      box-shadow: var(--shadow-focus);
-
-      & img {
-        filter: saturate(100%);
-      }
-    }
-
-    > li:active {
-      transform: scale(1.02);
     }
   }
 }
@@ -276,11 +304,11 @@
     /*	grid-template-columns: repeat(auto-fit, minmax(40ch, 1fr)); */
     grid-template-columns: repeat(auto-fit, minmax(max(50ch, 30vw), 2fr));
     grid-auto-rows: minmax(20ch, auto);
-  }
 
-  ul[data-orientation^="media-"]:has(li:only-child) {
-    display: block;
-    max-width: 120ch;
+    &:has(li:only-child) {
+      display: block;
+      max-width: 120ch;
+    }
   }
 }
 
