@@ -8,7 +8,7 @@
       "/^padding|^gap/": ["rem"]
     },
     "no-descending-specificity": [true, { "ignore": "selectors-within-list" }],
-    "unit-allowed-list": ["%", "deg", "px", "rem", "ms", "vw", "ch"],
+    "unit-allowed-list": ["%", "deg", "px", "rem", "ms", "vw", "ch", "fr"],
     "number-max-precision": 5,
     "csstools/use-nesting": "always",
     "selector-max-universal": 0,
