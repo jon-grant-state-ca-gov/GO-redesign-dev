@@ -184,13 +184,13 @@ main {
   &[data-orientation="media-end"] {
     > li {
       flex-direction: row-reverse;
-    }
 
-    & img {
-      border-start-start-radius: 0;
-      border-start-end-radius: var(--radius);
-      border-end-start-radius: 0;
-      border-end-end-radius: var(--radius);
+      img {
+        border-start-start-radius: 0;
+        border-start-end-radius: var(--radius);
+        border-end-start-radius: 0;
+        border-end-end-radius: var(--radius);
+      }
     }
 
     .card-text {
