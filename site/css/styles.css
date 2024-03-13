@@ -23,9 +23,9 @@
   --gutter-gap: 1.674vw;
   --flow-space: 1rem;
   --radius: 1rem;
-  --shadow: 0.2rem 0.2rem 0.5rem 0 rgba(0, 0, 0, 25%);
-  --shadow-focus: 0.1rem 0.1rem 0.25rem 0 rgba(0, 0, 0, 10%);
-  --shadow-active: 0.2rem 0.2rem 0.5rem 0 rgba(0, 0, 0, 60%);
+  --shadow: 0.2rem 0.2rem 0.5rem 0 rgba(0 0 0 / 25%);
+  --shadow-focus: 0.1rem 0.1rem 0.25rem 0 rgba(0 0 0 / 10%);
+  --shadow-active: 0.2rem 0.2rem 0.5rem 0 rgba(0 0 0 / 60%);
 
   /* Change this for overall font size */
   --fontSize: 1rem;
@@ -55,12 +55,9 @@
   --h1: calc(var(--h2) * var(--ratio) * var(--ratio));
 }
 
-body {
-  background-color: aqua;
-}
+/* --------------------- */
 
-/*---------------------*/
-/*   Cards            */
+/*   Cards               */
 
 .cards {
   padding: 0;
