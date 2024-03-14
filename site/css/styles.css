@@ -244,8 +244,10 @@ ul.cards {
     }
   }
 
-  &[data-orientation^="media-"] > li:only-child > img {
-    max-inline-size: 30%;
+  &[data-orientation^="media-"] > li:only-child {
+    > img {
+      max-inline-size: 30%;
+    }
   }
 
   + ul.cards {
