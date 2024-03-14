@@ -130,12 +130,6 @@ ul.cards {
       margin: 0;
       order: 2;
     }
-
-    &:has(.action:focus, .action:hover, .card-text:focus) {
-      > img {
-        filter: saturate(100%);
-      }
-    }
   }
 
   + ul.cards {
@@ -290,10 +284,16 @@ ul.cards {
       }
     }
   }
+
+  > li:has(.action:focus, .action:hover, .card-text:focus) {
+    > img {
+      filter: saturate(100%);
+    }
+  }
 }
 
 @supports (display: grid) {
-  .cards {
+  ul.cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
     grid-gap: var(--gutter-gap);
@@ -301,16 +301,16 @@ ul.cards {
     > li {
       height: 100%;
     }
-  }
 
-  ul[data-orientation^="media-"] {
-    /*	grid-template-columns: repeat(auto-fit, minmax(40ch, 1fr)); */
-    grid-template-columns: repeat(auto-fit, minmax(max(50ch, 30vw), 2fr));
-    grid-auto-rows: minmax(20ch, auto);
+    &[data-orientation^="media-"] {
+      /*	grid-template-columns: repeat(auto-fit, minmax(40ch, 1fr)); */
+      grid-template-columns: repeat(auto-fit, minmax(max(50ch, 30vw), 2fr));
+      grid-auto-rows: minmax(20ch, auto);
 
-    &:has(li:only-child) {
-      display: block;
-      max-width: 120ch;
+      &:has(li:only-child) {
+        display: block;
+        max-width: 120ch;
+      }
     }
   }
 }
