@@ -266,7 +266,7 @@ ul.cards {
     padding-inline: 1.5rem;
     border-radius: calc(var(--radius) * 1.5);
     text-decoration: none;
-    transition: box-shadow 0.3 ease-out;
+    transition: box-shadow 300ms ease-out;
     box-shadow: var(--shadow);
     align-self: start; /* not full width button */
     order: 3;
