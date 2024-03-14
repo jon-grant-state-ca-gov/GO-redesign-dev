@@ -103,6 +103,37 @@ ul.cards {
     flex-direction: column;
     justify-content: space-between;
 
+    > a.action {
+      --outline-color: var(--brand-primary);
+
+      background: var(--brand-primary);
+      color: white;
+      display: inline-block;
+      margin: var(--card-spacing);
+      margin-block: 0 1.5rem;
+      padding-block: 0.55rem;
+      padding-inline: 1.5rem;
+      border-radius: calc(var(--radius) * 1.5);
+      text-decoration: none;
+      transition: box-shadow 300ms ease-out;
+      box-shadow: var(--shadow);
+      align-self: start; /* not full width button */
+      order: 3;
+      margin-top: auto;
+
+      &:hover,
+      &:focus {
+        box-shadow: var(--shadow-focus);
+        background: var(--action-hover);
+        transform: scale(1.06);
+      }
+
+      &:active {
+        transform: scale(0.95);
+        background: var(--action-active);
+      }
+    }
+
     > img {
       aspect-ratio: 3 / 2;
       max-inline-size: 100%;
@@ -252,37 +283,6 @@ ul.cards {
 
   + ul.cards {
     margin-top: var(--gutter-gap);
-  }
-
-  .action {
-    --outline-color: var(--brand-primary);
-
-    background: var(--brand-primary);
-    color: white;
-    display: inline-block;
-    margin: var(--card-spacing);
-    margin-block: 0 1.5rem;
-    padding-block: 0.55rem;
-    padding-inline: 1.5rem;
-    border-radius: calc(var(--radius) * 1.5);
-    text-decoration: none;
-    transition: box-shadow 300ms ease-out;
-    box-shadow: var(--shadow);
-    align-self: start; /* not full width button */
-    order: 3;
-    margin-top: auto;
-
-    &:hover,
-    &:focus {
-      box-shadow: var(--shadow-focus);
-      background: var(--action-hover);
-      transform: scale(1.06);
-    }
-
-    &:active {
-      transform: scale(0.95);
-      background: var(--action-active);
-    }
   }
 
   > li:has(.action:focus, .action:hover, .card-text:focus) {
