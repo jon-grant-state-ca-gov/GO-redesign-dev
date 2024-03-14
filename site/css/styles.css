@@ -28,12 +28,12 @@
   --shadow-active: 0.2rem 0.2rem 0.5rem 0 rgba(0 0 0 / 60%);
 
   /* Change this for overall font size */
-  --fontSize: 1rem;
+  --font-size: 1rem;
 
   /* Font characteristics */
 
   --ratio: 1.24;
-  --s0: calc(var(--fontSize) - 0.3rem) + 0.2vw;
+  --s0: calc(var(--font-size) - 0.3rem) + 0.2vw;
 
   /* Typography calculations, please do not change */
 
