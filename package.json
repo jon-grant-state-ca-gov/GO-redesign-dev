@@ -9,7 +9,8 @@
   "bugs": "https://github.com/jon-grant-state-ca-gov/GO-redesign-dev/issues",
   "license": "MIT",
   "scripts": {
-    "GIT cleanup": "git clean -fd"
+    "GIT cleanup": "git clean -fd",
+    "deploy": "cp -r site/* ."
   },
   "private": true,
   "type": "module",
