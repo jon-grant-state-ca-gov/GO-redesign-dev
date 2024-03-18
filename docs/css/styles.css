@@ -136,8 +136,7 @@ ul.cards {
       aspect-ratio: 3 / 2;
       max-inline-size: 100%;
       block-size: auto;
-      border-start-start-radius: var(--radius);
-      border-start-end-radius: var(--radius);
+      border-radius: var(--radius) var(--radius) 0 0;
       object-fit: cover;
       object-position: center;
       filter: saturate(20%);
@@ -176,10 +175,7 @@ ul.cards {
       height: 100%;
 
       > img {
-        border-start-start-radius: var(--radius);
-        border-start-end-radius: 0;
-        border-end-start-radius: var(--radius);
-        border-end-end-radius: 0;
+        border-radius: var(--radius) 0 0 var(--radius);
         max-block-size: 100%;
         max-inline-size: 33%;
       }
