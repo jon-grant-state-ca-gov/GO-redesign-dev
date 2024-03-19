@@ -71,14 +71,12 @@ nav ul {
 nav li {
   padding: 0;
   margin-right: 6rem;
-  margin-top: 0;
-  background: none;
-  width: auto;
-  display: table-cell;
-  display: block;
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  flex: 1 1 auto;
+  color: #fff;
+  font-family: "Noto Sans";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 2rem; /* 177.778% */
 }
 
 nav li a {
@@ -374,11 +372,11 @@ header .avatar {
   z-index: 10;
 }
 
-header .avatar > img {
+/* header .avatar > img {
   border-radius: 50%;
   height: 104px;
   width: 104px;
-}
+} */
 
 header .container {
   margin: 0rem 1.25rem;
