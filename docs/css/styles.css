@@ -480,7 +480,7 @@ header {
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
   /* color: var(--go-brand-tahoe-blue); */
   /*text-align: center;*/
-  padding: 1rem 7.5625rem 0.5rem 2.75rem;
+  padding: 1rem 2rem 5rem 2rem;
   position: sticky;
   height: 4.5rem;
 
@@ -495,9 +495,9 @@ header {
   }
 }
 
-nav {
+/* nav {
   width: 73vw;
-}
+} */
 
 nav ul {
   display: flex;
@@ -508,13 +508,19 @@ nav li {
   list-style: none;
   display: inline;
   align-self: baseline;
-  transition: opacity 0.3s;
+  flex: 1;
 
   > a {
     color: var(--go-brand-tahoe-blue);
     text-decoration: none;
     font-size: 0.9rem;
     margin-right: 2.5rem;
+    font-family: "Noto Sans";
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.875rem; /* 125% */
+    letter-spacing: 0.03rem;
   }
 }
 
@@ -737,6 +743,66 @@ figcaption {
 
 .run-in li:last-child::after {
   content: "";
+}
+
+footer {
+  background-color: #071645;
+  color: var(--text-white);
+  font-size: 0.9rem;
+  font-weight: 200;
+  padding: 3.5rem 2rem 2rem var(--Footer-Foorter-left-spacing, 96px);
+
+  & section {
+    width: -webkit-fill-available;
+    width: -moz-available;
+    padding-left: 3rem;
+  }
+
+  & h3 {
+    font-size: var(--st);
+    margin-bottom: 1rem;
+  }
+
+  & ul {
+    list-style: none;
+    padding-inline-start: 0;
+  }
+  & ul li {
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+    width: max-content;
+  }
+  & ul > li a {
+    text-decoration: none;
+    color: var(--text-white);
+  }
+  & ul > li a:hover {
+    /*text-decoration: underline;*/
+    color: var(--action-primary);
+    font-weight: 600;
+  }
+
+  & svg {
+    overflow: visible;
+    height: 14rem;
+    margin-top: -3.35rem;
+    padding-left: 5rem;
+    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.25));
+  }
+
+  & hr {
+    background: linear-gradient(90deg, #071645 0%, rgba(255, 255, 255, 0) 100%);
+    margin-bottom: 1rem;
+  }
+
+  & container {
+    display: flex;
+  }
+
+  .utility-footer {
+    display: grid;
+    padding-left: 0rem;
+  }
 }
 
 /*   Cards            */

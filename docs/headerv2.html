@@ -1,0 +1,902 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>GO-site header v2</title>
+    <!--<<link href="typography-CodePen 1.css" rel="stylesheet" type="text/css">>-->
+    <link
+      href="code/css/go-header-angles-1.css"
+      rel="stylesheet"
+      type="text/css" />
+    <!--<link href="code/css/variables.scss" rel="stylesheet" type="text/css">-->
+  </head>
+
+  <style>
+      @charset "utf-8";
+    /* CA Design System CSS v1 */
+
+    /** BEGIN Fonts **/
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+    @import url ('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+    @import url ('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+    @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;200;300;400;500;600;700&display=swap');
+    /** End Fonts **/
+
+
+    /** BEGIN Typography CodePen CSS **/
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+    }
+
+    :root {
+       /*colors */
+      --gov-header: #071645;
+      --brand-primary: #13394B;
+      --brand-secondary: #0070A3;
+      --banner-light: #D5DBDE;
+      --banner-dark: #09202B;
+      --brand-hover-light: #3CA3D3;
+      --brand-hover-dark: #246C8E;
+      --background-primary-light: #D9D8CF;
+      --background-secondary-light: #F5F3EB;
+      --background-primary-dark: #43433F;
+      --background-secondary-dark: #65645F;
+      --action-primary: #FEC335;
+      --action-secondary: #FAE2AD;
+      --text-white: #FFFFFF;
+
+      /* Greys */
+      --grey: #CCCCCC;
+      --grey-text: #323232;
+      --grey-background: #EEEEEE;
+
+      /*Tokens*/
+      --gutter-gap: 1.674vw;
+      --flow-space: 1rem;
+      --radius: 1rem;
+      --shadow: .2rem .2rem .5em 0 rgba(0, 0, 0, 0.25);
+      --shadow-focus: .1rem .1rem .25em 0 rgba(0, 0, 0, 0.1);
+      --shadow-active: .2rem .2rem .5em 0 rgba(0, 0, 0, 0.6);
+
+
+      /* Change this for overall font size*/
+      --fontSize: 1rem;
+
+      /* Font characteristics */
+
+      --ratio: 1.24;
+      --s0: calc(var(--fontSize) - .3rem ) + .2vw;
+
+
+      /* Typography calculations, please do not change*/
+
+
+      /*Small-text to allow for more control*/
+      --st: calc(var(--s0) * var(--ratio));
+
+      /*The font size of standard paragraph text */
+      --base: calc(var(--st) * var(--ratio));
+
+      /*()Lead-text to allow for more control*/
+      --lt: calc(var(--base) * var(--ratio));
+
+      --h6: calc(var(--s0) * var(--ratio));
+      --h5: calc(var(--h6) * var(--ratio));
+      --h4: calc(var(--h5) * var(--ratio));
+      --h3: calc(var(--h4) * var(--ratio));
+      --h2: calc(var(--h3) * var(--ratio));
+      --h1: calc(var(--h2) * var(--ratio) * var(--ratio));
+
+
+    }
+
+    /* Accessibility backward compatibility */
+    .sr-only {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
+    }
+
+    body {
+      min-height: 100vh;
+      font-size:clamp(1rem, var(--base), 5rem);
+      flex-direction: column;
+      color: var(--grey-text);
+
+      /* the last font listed is the one used */
+      font-family: 'Inter';
+      font-family: 'Roboto';
+      font-family: 'Public Sans';
+      font-family: 'Noto Sans';
+      letter-spacing: .02rem;
+      line-height: 1rem;
+
+    /*Change font weight for the base: Imported 100, 200, 300, 400, 500, 600, 700 */
+      font-weight: 400;
+
+    }
+
+    header {
+      display: flex;
+      background-color: var(--gov-header);
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      color: var(--text-white);
+      /*text-align: center;*/
+      padding: 1rem 1.75rem;
+      height: 4.5rem;
+
+    	& p { display: block; }
+
+    	& img {
+    		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+
+        & nav {
+          width: 73vw;
+    }
+        & nav ul {
+    	  display: flex;
+    	  margin: .5rem auto;
+    }
+
+    }
+
+    nav li {
+    	list-style: none;
+    	display: inline;
+    	align-self: baseline;
+    }
+
+    nav li>a {
+    	color: var(--text-white);
+    	text-decoration: none;
+    	font-size: .9rem;
+    	margin-right: 2.5rem;
+    }
+
+    nav span {
+        width: 51%;
+        margin-top: .25rem;
+    	padding-top: 0.15rem;
+        display: block;
+        background-color: var(--action-primary);
+    }
+
+    menu { width: 13.5%; }
+    menu ul { margin: .85rem; }
+    menu li {
+    	 list-style: none;
+    	 display: inline;
+    }
+    menu li>a {
+    	  color: var(--text-white);
+    	  text-decoration: none;
+    	  font-size: .9rem;
+    }
+
+    .caGov {
+    	margin: .5rem auto;
+    }
+
+    main {
+      max-width: 90vw;
+      margin: 3rem auto;
+    }
+
+    /* Global margin */
+    main * + * {
+    margin-block-start: var(--flow-space);
+    }
+
+    /* Sets rule for lead text */
+    h1+p {
+      font-size: calc(var(--lt) - .02rem);
+      line-height: 1.5;
+    }
+
+    h1 {
+      font-weight: 600;
+      font-size: var(--h1);
+      line-height: 1.619;
+    }
+
+    h2 {
+      font-weight: 600;
+      font-size: var(--h2);
+      line-height: 1.619;
+    }
+
+    h3 {
+      font-weight: 600;
+      font-size: var(--h3);
+      line-height: 1.619;
+    }
+
+    h4 {
+      font-weight: 600;
+      font-size: var(--h4);
+      line-height: 1.619;
+    }
+
+    h5 {
+      font-weight: 500;
+      font-size: var(--h5);
+    }
+
+    li + li {
+      margin-top: .5rem;
+
+     }
+
+    p {
+      line-height: 1.6;
+    }
+
+    blockquote {
+      border-left: rgba(0,0,0,0.12) 2px solid;
+      margin-left: 0;
+      padding-left: calc(2ch + .5rem);
+    }
+
+    footer {
+      background-color: #071645;
+      color: var(--text-white);
+      font-size: 0.9rem;
+      font-weight: 200;
+      padding: 3.5rem 2rem 2rem var(--Footer-Foorter-left-spacing, 96px);
+
+      & section {
+        width: -webkit-fill-available;
+    	width: -moz-available;
+        padding-left: 3rem;
+    }
+
+      & h3 {
+    	  font-size: var(--st);
+    	  margin-bottom: 1rem;
+    	}
+
+      & ul {
+    	  list-style: none;
+    	  padding-inline-start: 0;
+    	}
+      & ul li {
+    	  font-size: .8rem;
+    	  margin-bottom: 1.5rem;
+    	  width: max-content;
+        }
+      & ul >li a {
+    	  text-decoration: none;
+    	  color: var(--text-white);
+    	}
+      & ul >li a:hover {
+    	  /*text-decoration: underline;*/
+    	  color: var(--action-primary);
+    	  font-weight: 600;
+    	}
+
+      & svg {
+        overflow: visible;
+        height: 14rem;
+        margin-top: -3.35rem;
+        padding-left: 5rem;
+        filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.25));}
+
+       & hr {
+    	  background: linear-gradient(90deg, #071645 0%, rgba(255, 255, 255, 0.00) 100%);
+    	  margin-bottom: 1rem;
+    	}
+
+       & container {
+    	  display: flex;
+
+    	}
+
+    	.utility-footer {
+    		display: grid;
+    		padding-left: 0rem;
+    	}
+
+    }
+
+    article > header ~ * {
+      margin-top: 0.15rem;
+    }
+
+    figure {
+    	display: inline-flex;
+
+    }
+
+    figcaption {
+    	margin: 1.5rem 3.5rem 1rem 1rem;
+    	width: max-content;
+
+    	& small { font-size: .9rem;	}
+    	& p { font-size: 1.25rem; }
+    }
+
+    /** END Typography CodePen CSS **/
+
+    /** Begin Erueka Cards CodePen CSS **/
+    :root {
+    }
+
+    * {
+      /*outline: 1px solid red;*/
+      box-sizing: border-box;
+    }
+
+
+    /* Focus Styles | thanks Stephanie Eckles */
+
+    :is(a, button, input, textarea, summary) {
+      --outline-size: max(2px, 0.08em);
+      --outline-style: solid;
+      --outline-color: currentColor;
+
+      &:focus {
+        outline: var(--outline-size) var(--outline-style) var(--outline-color);
+        outline-offset: var(--outline-offset, var(--outline-size));
+
+        &:not(:focus-visible) {
+          outline: none;
+        }
+      }
+
+      &:focus-visible {
+        outline: var(--outline-size) var(--outline-style) var(--outline-color);
+        outline-offset: var(--outline-offset, var(--outline-size));
+      }
+    }
+
+    /*---------------------*/
+
+    /* Divider under <h1> not owrking, yet. */
+    /*.divider {
+    	background-color: #FDBC5B;
+    	height: 2px;
+    	margin: 2rem -5.4rem 2rem -5.5rem;
+    }
+    */
+    /** Run-in List CSS **/
+    .run-in, .run-in li {
+    	padding: 0;
+    	background: none;
+    	display: inline;
+    }
+
+    .run-in li::after {
+    	content: " | ";
+    }
+
+    .run-in li:last-child::after {
+    	content: ""
+    }
+
+    /*   Cards            */
+
+    .cards {
+      padding: 0;
+      font-size: 0.85em;
+      --card-spacing: 1.5rem;
+      :has(.action:focus) img,
+      :has(.action:hover) img,
+      :has(.card-text:focus) img {
+        filter: saturate(100%);
+      }
+
+      + .cards {
+        margin-top: var(--gutter-gap);
+      }
+
+      & img {
+        aspect-ratio: 3 / 2;
+        max-inline-size: 100%;
+        block-size: auto;
+        border-start-start-radius: var(--radius);
+        border-start-end-radius: var(--radius);
+        object-fit: cover;
+        object-position: center;
+        filter: saturate(20%);
+        margin: unset;
+        order: 1;
+
+      }
+
+      & h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-size: var(--h3);
+      }
+
+      > li {
+        margin-block-start: 0;
+        border-radius: var(--radius);
+        border-style: solid;
+        border-width: 1px;
+        border-color: var(--grey);
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .card-text {
+        padding: var(--card-spacing);
+        margin: 0;
+        order: 2;
+      }
+
+      .action {
+        --outline-color: var(--brand-secondary);
+        background: var(--brand-secondary);
+        color: white;
+        display: inline-block;
+        margin: var(--card-spacing);
+        margin-block-start: 0;
+        margin-block-end: 1.5rem;
+        padding-block: 0.55rem;
+        padding-inline: 1.5rem;
+        border-radius: calc(var(--radius) * 1.5);
+        text-decoration: none;
+        transition: box-shadow 0.3 ease-out;
+        box-shadow: var(--shadow);
+        align-self: start; /*not full width button*/
+        order: 3;
+        margin-top: auto;
+
+        &:hover,
+        &:focus {
+        box-shadow: var(--shadow-focus);
+        background: var(--brand-hover-light);
+        transform: scale(1.06);
+        }
+        &:active {
+        transform: scale(0.95);
+        background: var(--brand-primary);
+        }
+      }
+
+      [data-featured] {
+        grid-column-start: span 2;
+
+        & img {
+          aspect-ratio: 16 / 5;
+          width: 100%;
+        }
+      }
+
+      &[data-orientation^="media-"] {
+      > li {
+        display: block;
+      }
+
+      > li {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+      }
+
+      & img {
+        border-start-start-radius: var(--radius);
+        border-start-end-radius: 0;
+        border-end-start-radius: var(--radius);
+        border-end-end-radius: 0;
+        max-block-size: 100%;
+        max-inline-size: 33%;
+      }
+
+      li:only-child {
+        img {
+          max-inline-size: 30%;
+        }
+      }
+    }
+
+      &[data-orientation="media-end"] {
+
+       > li {
+        flex-direction: row-reverse;
+      }
+
+      & img {
+        border-start-start-radius: 0;
+        border-start-end-radius: var(--radius);
+        border-end-start-radius: 0;
+        border-end-end-radius: var(--radius);
+      }
+
+      .card-text {
+        flex-grow: 2;
+      }
+    }
+
+      &[data-action="interactive"] {
+      > li {
+        box-shadow: var(--shadow);
+        cursor: pointer;
+        transition: all 0.3s ease-out;
+        justify-content: start;
+        position: relative;
+
+      }
+
+      .card-text a::before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      z-index: 3000; /*for Chrome and Edge to allow anchor over the img*/
+      }
+        >li:focus-within {
+           --outline-size: max(2px, 0.08em);
+            --outline-style: solid;
+                outline: var(--outline-size) var(--outline-style) var(--brand-primary);
+        outline-offset: var(--outline-offset, var(--outline-size));
+
+          a:focus {
+            outline: none;
+          }
+
+          & img {
+            filter: saturate(100%);
+          }
+        }
+
+        h2>a{
+          color: inherit;
+          text-decoration: none;
+        }
+
+        img{
+           margin-block-start: unset;
+        }
+
+      > li > a {
+        display: block;
+        color: currentColor;
+        text-decoration: none;
+        border-radius: var(--radius);
+        height: 100%;
+        --outline-color: var(--brand-primary);
+      }
+
+      > li:hover,
+      > li:focus {
+        transform: scale(1.04);
+        box-shadow: var(--shadow-focus);
+
+        & img {
+          filter: saturate(100%);
+        }
+      }
+
+      > li:active {
+        transform: scale(1.02);
+      }
+    }
+
+    }
+
+    @supports (display: grid) {
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+        grid-gap: var(--gutter-gap);
+
+        > li {
+          height: 100%;
+        }
+      }
+
+      ul[data-orientation^="media-"] {
+        /*	grid-template-columns: repeat(auto-fit, minmax(40ch, 1fr)); */
+        grid-template-columns: repeat(auto-fit, minmax(max(50ch, 30vw), 2fr));
+        grid-auto-rows: minmax(20ch, auto);
+      }
+
+      ul[data-orientation^="media-"]:has(li:only-child) {
+        display: block;
+        max-width: 120ch;
+      }
+    }
+
+    @media (prefers-reduced-motion) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+    }
+  </style>
+
+  <body>
+    <!-- Dark blue header -->
+    <!--<header>
+  <h1>CSS Center Transparent Triangle</h1>
+        <div class="white" id="cutout">
+            <div class="left"></div>
+            <div class="triangle"></div>
+            <div class="right"></div>
+        </div>
+</header>
+-->
+    <header>
+      <figure>
+        <a href=""
+          ><img
+            width="170rem"
+            src="media/images/Governor Gavin Newsom_Logo_March 2024-01 2.png"
+            alt="Governor Gavion Newsom's Branding: Five pointed star atop the Calfornia Bear with a blue background." /><span
+            class="sr-only"
+            >Visit Governor Newsom's homepage.</span
+          ></a
+        >
+      </figure>
+      <nav>
+        <ul>
+          <li><a href="#">About</a><span></span></li>
+          <li><a href="">Vision for California</a></li>
+          <li><a href="">News</a></li>
+          <li><a href="">Join the Administration</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </nav>
+      <menu aria-description="Language translation toggles">
+        <ul class="run-in">
+          <li><a href="">Español</a></li>
+          <li><a href="">Translate</a></li>
+        </ul>
+      </menu>
+      <a href="" title="CA.gov home page" aria-description="CA.gov home page"
+        ><img
+          class="caGov"
+          src="media/images/CA.gov-logo.png"
+          alt="CA.gov logo"
+      /></a>
+    </header>
+
+    <main>
+      <h1>About</h1>
+      <div class="divider"></div>
+      <p>
+        Gavin Newsom is the Governor of California, former Lieutenant Governor
+        of California, and former Mayor of San Francisco.
+      </p>
+      <ul class="cards">
+        <li>
+          <div class="card-text">
+            <h2>Grizzly Bear</h2>
+            <p>Description</p>
+          </div>
+          <a class="action" href="">Call to action</a>
+          <img
+            src="https://live.staticflickr.com/5609/15596534729_9c240ff83a_b.jpg"
+            alt="Brown bear" />
+        </li>
+        <li>
+          <div class="card-text">
+            <h2>Redwoods</h2>
+            <p>Description</p>
+            <p>I'm NOT a quote</p>
+            <p>I'm a problem</p>
+          </div>
+          <a href="#" class="action">Call to action</a>
+          <img
+            src="https://live.staticflickr.com/5718/30570616183_8c044d2a85_b.jpg"
+            alt="Enjoy the silence in the red wood forest" />
+        </li>
+        <li>
+          <div class="card-text">
+            <h2>Poppy</h2>
+            <p>Stuff</p>
+          </div>
+          <a class="action" href="#">Call to action</a>
+          <img
+            src="https://live.staticflickr.com/5718/30570616183_8c044d2a85_b.jpg"
+            alt="Enjoy the silence in the red wood forest" />
+        </li>
+      </ul>
+      <ul class="cards" data-orientation="media-" data-action="interactive">
+        <li>
+          <div class="card-text">
+            <h2><a href="#">Card Test 1</a></h2>
+            <p>This is only a test.</p>
+          </div>
+          <img
+            src="https://live.staticflickr.com/5609/15596534729_9c240ff83a_b.jpg"
+            alt="Brown bear" />
+        </li>
+        <li>
+          <div class="card-text">
+            <h2><a href="#">Card Test 2</a></h2>
+            <p>This is only another test.</p>
+          </div>
+          <img
+            src="https://live.staticflickr.com/5609/15596534729_9c240ff83a_b.jpg"
+            alt="Brown bear" />
+        </li>
+      </ul>
+      <ul class="cards" data-orientation="media-end" data-action="interactive">
+        <li>
+          <div class="card-text">
+            <h2><a href="#">Card Test 3</a></h2>
+            <p>This still is only test.</p>
+          </div>
+          <img
+            src="https://live.staticflickr.com/5609/15596534729_9c240ff83a_b.jpg"
+            alt="Brown bear" />
+        </li>
+        <li>
+          <div class="card-text">
+            <h2><a href="#">Card Test 4</a></h2>
+            <p>This is always test.</p>
+          </div>
+          <img
+            src="https://live.staticflickr.com/5609/15596534729_9c240ff83a_b.jpg"
+            alt="Brown bear" />
+        </li>
+      </ul>
+      <ul class="cards" data-action="interactive">
+        <li>
+          <div class="card-text">
+            <h2><a href="#">Card</a></h2>
+            <p>
+              "Says who?" said Harry, taking off his sneakers and emptying them
+              of water. "Hope they hurry up with the Sorting. I'm starving." The
+              Sorting of the new students into Houses took place at the start of
+              every school year,
+            </p>
+          </div>
+          <img
+            src="https://live.staticflickr.com/5609/15596534729_9c240ff83a_b.jpg"
+            alt="Brown bear" />
+        </li>
+        <li>
+          <div class="card-text">
+            <h2><a href="#">Card 2</a></h2>
+            <p>
+              "Says who?" said Harry, taking off his sneakers and emptying them
+              of water. "Hope they hurry up with the Sorting. I'm starving."
+            </p>
+          </div>
+          <img
+            src="https://live.staticflickr.com/5718/30570616183_8c044d2a85_b.jpg"
+            alt="Enjoy the silence in the red wood forest" />
+        </li>
+        <li>
+          <div class="card-text">
+            <h2><a href="#">Card 3</a></h2>
+            <p>It's a poppy y'all!</p>
+          </div>
+          <img
+            src="https://live.staticflickr.com/8628/16622486169_087756b818_b.jpg"
+            alt="California poppy flower" />
+        </li>
+      </ul>
+      <ul class="cards" data-orientation="media-end" data-action="interactive">
+        <li>
+          <div class="card-text">
+            <h2><a href="#">Card 2</a></h2>
+            <p>
+              "Says who?" said Harry, taking off his sneakers and emptying them
+              of water. "Hope they hurry up with the Sorting. I'm starving."
+              "Says who?" said Harry, taking off his sneakers and emptying them
+              of water. "Hope they hurry up with the Sorting. I'm starving."
+              "Says who?" said Harry, taking off his sneakers and emptying them
+              of water. "Hope they hurry up with the Sorting. I'm starving."
+              "Says who?" said Harry, taking off his sneakers and emptying them
+              of water. "Hope they hurry up with the Sorting. I'm starving."
+              "Says who?" said Harry, taking off his sneakers and emptying them
+              of water. "Hope they hurry up with the Sorting. I'm starving."
+              "Says who?" said Harry, taking off his sneakers and emptying them
+              of water. "Hope they hurry up with the Sorting. I'm starving."
+            </p>
+          </div>
+          <img
+            src="https://live.staticflickr.com/5609/15596534729_9c240ff83a_b.jpg"
+            alt="Brown bear" />
+        </li>
+      </ul>
+      <ul class="cards" data-orientation="media-" data-action="interactive">
+        <li>
+          <div class="card-text">
+            <h2><a href="#">Card 2</a></h2>
+            <p>
+              "Says who?" said Harry, taking off his sneakers and emptying them
+              of water. "Hope they hurry up with the Sorting. I'm starving."
+              "Says who?" said Harry, taking off his sneakers and emptying them
+              of water. "Hope they hurry up with the Sorting. I'm starving."
+              "Says who?" said Harry, taking off his sneakers and emptying them
+              of water. "Hope they hurry up with the Sorting. I'm starving."
+            </p>
+          </div>
+          <img
+            src="https://live.staticflickr.com/8628/16622486169_087756b818_b.jpg"
+            alt="California poppy flower" />
+        </li>
+      </ul>
+    </main>
+
+    <footer>
+      <container>
+        <figure>
+          <img height="90vh" src="media/images/seal-white 5.png" alt="" />
+          <figcaption>
+            <small>Office of Governor</small>
+            <p>Gavin Newsom</p>
+          </figcaption>
+        </figure>
+        <section>
+          <h3>About</h3>
+          <ul>
+            <li><a href="#">Sign up for news updates</a></li>
+            <li><a href="#">Career opportunities</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </section>
+        <section>
+          <h3>State initiatives</h3>
+          <ul>
+            <li><a href="#">Building California’s Future</a></li>
+            <li><a href="#">Climate Action</a></li>
+            <li><a href="#">Artificial Intelligence</a></li>
+          </ul>
+        </section>
+        <section>
+          <h3>State campaigns</h3>
+          <ul>
+            <li><a href="#">Register to Vote</a></li>
+            <li><a href="#">Save our Water</a></li>
+            <li><a href="#">Flex Alert</a></li>
+          </ul>
+        </section>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="319"
+          height="289"
+          viewBox="0 0 319 289"
+          fill="none">
+          <path
+            d="M263.895 216.013V216.038C264.851 217.824 266.827 218.421 268.234 219.688C277.443 227.965 286.385 236.504 296.289 243.99C300.031 246.83 303.682 249.976 305.236 254.796C307.478 261.738 303.114 266.913 296.148 266.054C284.055 264.554 273.822 267.699 271.531 282.7C287.968 282.7 304.352 282.676 320.765 282.7C322.003 282.7 322.6 282.078 323.343 281.176C330.95 271.729 338.562 262.311 344.596 251.743C346.693 248.048 348.747 244.087 348.174 239.771C347.101 231.732 344.164 224.222 340.805 216.829C338.086 210.868 334.125 205.499 332.265 199.129C332.265 199.129 331.838 198.27 332.809 196.814C333.484 195.804 334.45 196.411 335.023 196.527C340.057 197.527 345.111 198.052 350.217 198.532C361.694 199.581 372.903 199.032 383.782 195.076L390.578 190.988L393.806 188.61C395.311 189.542 396.811 190.445 398.316 191.377L399.651 193.882V193.955C395.525 201.013 393.185 208.741 392.568 216.805C391.447 231.519 393.33 246.019 396.67 260.379C397.457 263.694 398.389 267.224 397.054 270.777C396.554 272.161 395.957 272.496 394.762 271.612C394.238 271.229 393.806 270.588 393.258 270.442C383.262 268.083 373.602 267.651 365.179 275.141C363.101 276.976 361.815 279.127 361.077 281.676C359.839 285.899 361.723 288.448 366.038 288.448H434.356C438.531 288.448 439.293 287.899 439.725 283.773C439.963 281.554 440.249 279.098 439.628 277.025C437.72 270.539 440.798 265.981 447.356 264.505C451.793 263.505 455.085 261.024 457.9 257.685C460.094 255.063 462.41 252.51 464.459 249.767C473.619 237.553 482.969 225.509 492.989 213.989V214.038C494.086 213.106 495.159 212.203 496.231 211.271H496.207C501.125 217.135 503.892 224.125 506.586 231.116C509.543 238.796 514.46 243.733 522.951 245.238C533.66 247.145 544.252 249.815 554.534 253.49C559.039 255.087 563.525 256.66 567.559 259.287C568.535 259.908 569.777 260.597 569.345 262.005C568.986 263.243 567.7 263.651 566.554 263.816C564.549 264.126 562.573 264.054 560.544 263.408C558.326 262.719 556.01 262.214 553.699 261.952C547.019 261.214 542.393 265.267 537.883 269.248C534.854 271.918 532.422 275.161 531.393 279.243C530.466 282.938 531.228 283.943 534.995 283.943C552.267 283.943 569.559 283.821 586.831 284.04C590.433 284.088 591.89 283.064 592.914 279.554C596.132 268.442 599.404 257.325 604.696 246.951C608.23 240.034 607.798 237.485 602.647 231.878C598.9 227.8 594.797 223.985 591.817 219.237C586.186 210.295 584.71 200.134 583.826 189.974C582.894 179.265 582.108 168.531 582.346 157.774C582.394 155.677 581.918 153.531 581.511 151.429C579.651 141.696 576.646 132.326 572.637 123.287C569.37 115.918 566.219 108.452 560.544 102.491L560.52 102.515C562.452 99.0585 565.36 95.908 564 91.3787C562.763 91.3059 562.068 92.4516 561.044 92.8836L561.112 92.8351C560.83 91.0243 561.447 89.1602 560.733 87.398C557.18 78.7861 552.932 70.9412 542.102 70.1305C541.742 70.1062 541.364 69.679 541.102 69.3684C539.573 67.5819 538 65.8391 536.543 64.0041C531.655 57.8971 526.334 52.198 519.965 47.5231C505.727 37.0519 489.649 30.5177 472.876 25.6778C457.347 21.1922 441.507 18.2115 425.409 16.3037C413.957 14.9444 402.559 14.0124 391.058 13.8716C380.49 13.7502 369.946 14.2308 359.451 15.2794L359.475 15.3037L359.456 15.2794L359.431 15.2551C350.703 16.1386 341.945 16.6872 333.266 17.9251C323.188 19.4009 327.892 20.0902 301.735 21.5805L301.774 21.7893C297.027 21.6922 292.541 20.5271 288.152 18.7843C278.016 14.7551 268.38 9.53165 258.098 5.88106C249.962 2.99748 241.855 -0.0123144 233.005 0.371192H233.03C231.195 0.274102 229.403 0.230411 227.568 0.560518C215.379 2.85185 205.048 9.0996 194.771 15.5173C186.086 20.93 177.669 26.7506 168.319 30.974C160.207 34.6489 151.716 37.5567 144.299 42.6588C143.702 43.0666 143.08 43.0666 142.464 43.0423C139.435 42.8773 136.808 44.1152 134.352 45.5958C125.094 51.2222 117.847 59.1448 110.521 66.9654L110.497 67.0139C109.235 68.1353 108.565 69.8781 107.133 70.5674C103.099 64.8925 98.6858 59.737 90.9331 60.6448C82.1562 61.6448 80.3648 68.6353 79.3648 76.1695C76.2871 73.4753 73.1171 71.9024 69.5636 71.6403C62.3837 71.0917 55.2282 77.8152 55.5146 85.1164C55.7039 89.9321 54.5825 93.9419 51.2669 97.3983C49.0484 99.7382 46.8784 102.122 44.757 104.554C40.8928 108.991 36.8636 113.307 33.7858 118.341C30.5673 123.613 31.3052 129.525 31.4945 135.273C31.6158 138.997 30.2323 141.929 27.9653 144.599C19.7126 154.356 10.6735 163.347 1.62953 172.362C0.22172 173.769 0.0323942 174.721 1.50817 176.274C9.38218 184.503 17.6106 192.255 27.5332 198.003C31.9945 200.581 36.8587 201.678 42.0579 200.892C44.9221 200.464 47.7814 200.032 50.6455 199.77C59.9031 198.935 69.0635 197.43 78.2434 196.047C82.8212 195.357 87.3796 193.566 92.1516 195.285C94.943 196.285 97.8508 197.12 100.764 197.625C107.516 198.794 114.361 199.892 121.041 197.435C127.026 195.241 131.061 190.425 134.852 185.702C138.978 180.575 142.677 175.206 149.046 172.488C151.362 171.512 152.959 169.362 155.556 168.624C162.115 166.764 168.698 167.075 175.334 167.91L175.309 167.983L176.576 168.629C175.79 169.891 174.809 171.061 174.237 172.42C169.489 183.702 167.343 195.649 166.435 207.717C165.838 215.635 164.095 222.412 158.299 228.373C152.814 234.048 148.974 241.087 145.444 248.262C142.867 253.534 141.459 259.185 139.124 264.529C136.74 269.991 133.114 271.923 127.361 270.539C125.619 270.136 123.881 269.442 122.114 269.277C118.347 268.942 114.861 267.034 110.807 268.156C103.079 270.277 98.6421 276.219 93.8701 281.797C92.8701 282.943 91.4865 284.399 92.5351 286.064C93.4914 287.613 95.3265 287.831 97.1129 287.831H164.523C165.858 287.831 166.741 287.593 167.698 286.331C175.139 276.53 184.179 268.539 194.917 262.408C200.902 258.995 207.417 256.587 213.286 252.893C230.559 242.043 245.059 228.043 259.064 213.421L259.089 213.373"
+            fill="white"
+            fill-opacity="0.1" />
+        </svg>
+      </container>
+      <br />
+      <div>
+        <section class="utility-footer">
+          <hr />
+          <ul class="run-in">
+            <li><a href="">Conditions of use</a></li>
+            <li><a href="">Privacy</a></li>
+            <li><a href="">Accessibility</a></li>
+            <li><a href="">Website Accessibility</a></li>
+            <li><a href="">Sitemap</a></li>
+          </ul>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>
