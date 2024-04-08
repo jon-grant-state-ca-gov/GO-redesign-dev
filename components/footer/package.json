@@ -1,6 +1,6 @@
 {
   "name": "@cagovweb/go-site-footer",
-  "version": "0.0.1-beta2",
+  "version": "0.0.1-beta4",
   "description": "Footer for GO site update",
   "type": "module",
   "main": "dist/style.css",
@@ -18,7 +18,7 @@
   },
   "publishConfig": {
     "access": "public",
-    "tag": "beta"
+    "tag": "latest"
   },
   "license": "ISC",
   "scripts": {
