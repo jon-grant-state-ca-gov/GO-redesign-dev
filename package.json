@@ -20,5 +20,8 @@
     "stylelint": "^16.2.1",
     "stylelint-config-standard": "^35.0.0",
     "stylelint-use-nesting": "^5.1.1"
+  },
+  "dependencies": {
+    "@cagovweb/go-site-card": "^0.0.1-beta2"
   }
 }

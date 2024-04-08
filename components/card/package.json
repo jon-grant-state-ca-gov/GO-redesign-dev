@@ -1,0 +1,33 @@
+{
+  "name": "@cagovweb/go-site-card",
+  "version": "0.0.1-beta2",
+  "description": "Card for GO site update",
+  "type": "module",
+  "main": "dist/style.css",
+  "homepage": "https://jon-grant-state-ca-gov.github.io/GO-redesign-dev/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jon-grant-state-ca-gov/GO-redesign-dev",
+    "directory": "components/card"
+  },
+  "bugs": "https://github.com/jon-grant-state-ca-gov/GO-redesign-dev/issues",
+  "author": {
+    "name": "Jon Grant",
+    "email": "jon.grant@state.ca.gov",
+    "url": "https://github.com/jon-grant-state-ca-gov"
+  },
+  "publishConfig": {
+    "access": "public",
+    "tag": "latest"
+  },
+  "license": "ISC",
+  "scripts": {
+    "NPM Publish (dry run)": "npm publish --dry-run",
+    "NPM Publish (view package)": "npm pack",
+    "NPM publish": "npm publish",
+    "NPM deprecate old version": "npm deprecate @cagovweb/go-site-card@0.0.1-beta1 \"Version no longer supported. Upgrade to @latest\""
+  },
+  "dependencies": {
+    "@cagovweb/go-site-base-css": "^0.0.1-beta1"
+  }
+}
