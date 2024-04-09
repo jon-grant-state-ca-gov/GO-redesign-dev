@@ -28,6 +28,6 @@
     "NPM deprecate old version": "npm deprecate @cagovweb/go-site-card@0.0.1-beta1 \"Version no longer supported. Upgrade to @latest\""
   },
   "dependencies": {
-    "@cagovweb/go-site-base-css": "^0.0.1-beta1"
+    "@cagovweb/go-site-base-css": "^0.0.1-beta2"
   }
 }

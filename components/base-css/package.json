@@ -1,9 +1,9 @@
 {
   "name": "@cagovweb/go-site-base-css",
-  "version": "0.0.1-beta1",
+  "version": "0.0.1-beta2",
   "description": "Base styles for GO site update",
   "type": "module",
-  "main": "dist/base-css.css",
+  "main": "dist",
   "homepage": "https://jon-grant-state-ca-gov.github.io/GO-redesign-dev/",
   "repository": {
     "type": "git",
@@ -18,7 +18,7 @@
   },
   "publishConfig": {
     "access": "public",
-    "tag": "beta"
+    "tag": "latest"
   },
   "license": "ISC",
   "scripts": {

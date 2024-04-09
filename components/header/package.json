@@ -1,14 +1,14 @@
 {
-  "name": "@cagovweb/go-site-footer",
-  "version": "0.0.1-beta4",
-  "description": "Footer for GO site update",
+  "name": "@cagovweb/go-site-header",
+  "version": "0.0.1-beta1",
+  "description": "Header for GO site update",
   "type": "module",
   "main": "dist/style.css",
   "homepage": "https://jon-grant-state-ca-gov.github.io/GO-redesign-dev/",
   "repository": {
     "type": "git",
     "url": "https://github.com/jon-grant-state-ca-gov/GO-redesign-dev",
-    "directory": "components/footer"
+    "directory": "components/header"
   },
   "bugs": "https://github.com/jon-grant-state-ca-gov/GO-redesign-dev/issues",
   "author": {
