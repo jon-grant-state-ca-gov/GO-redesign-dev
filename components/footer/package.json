@@ -1,6 +1,6 @@
 {
   "name": "@cagovweb/go-site-footer",
-  "version": "0.0.1-beta4",
+  "version": "0.0.1-beta5",
   "description": "Footer for GO site update",
   "type": "module",
   "main": "dist/style.css",
@@ -28,6 +28,6 @@
     "NPM publish": "npm publish"
   },
   "dependencies": {
-    "@cagovweb/go-site-base-css": "^0.0.1-beta2"
+    "@cagovweb/go-site-base-css": "^0.0.1-beta3"
   }
 }
