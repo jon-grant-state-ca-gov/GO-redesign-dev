@@ -17,9 +17,9 @@ section {
 }
 
 /* Basic styling for the table of contents */
-.toc-container {
+.topics {
   & h4:first-child {
-    color: var(--ds-grayscale-simplified-gray-503, #6d6d6d);
+    color: var(--navigation-submenu-dark, #6b6b6b);
     font-family: "Noto Sans";
     font-size: 1.5rem;
     font-style: normal;
@@ -29,14 +29,14 @@ section {
   }
 
   & button {
-    background: var(--go-brand-big-sur-blue, #1b499b);
+    background: var(--brand-secondary, #1b499b);
     box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
     color: #fff;
     cursor: pointer;
   }
 }
 
-.toc-list {
+.topic-list {
   list-style: none;
   padding: 0;
   text-decoration: none;
@@ -48,7 +48,7 @@ section {
 
   & a {
     text-decoration: none;
-    color: var(--DS-grayscale-Simplified-gray-504, #494949);
+    color: var(--background-primary-dark, #43433f);
     display: flex;
     /* H3/Desktop */
     font-family: "Noto Sans";
@@ -61,7 +61,7 @@ section {
 
   & span:not(.selected-item-svg) {
     /* border: 1px solid var(--ds-grayscale-simplified-gray-501, #b6b6b6); */
-    color: var(--DS-grayscale-Simplified-gray-503, #6d6d6d);
+    color: var(--navigation-submenu-dark, #6b6b6b);
     /* H3/Desktop */
     font-family: "Noto Sans";
     font-size: 2rem;
@@ -74,7 +74,7 @@ section {
 }
 
 section {
-  color: var(--DS-grayscale-Simplified-gray-504, #494949);
+  color: var(--background-primary-dark, #43433f);
 
   /* H5 Text/Desktop */
   font-family: "Noto Sans";
@@ -85,7 +85,7 @@ section {
 }
 
 section .topic-category {
-  color: var(--DS-grayscale-Simplified-gray-503, #6d6d6d);
+  color: var(--navigation-submenu-dark, #6b6b6b);
   /* H4/Desktop */
   font-family: "Noto Sans";
   font-size: 1.2rem;
@@ -96,7 +96,7 @@ section .topic-category {
 }
 
 section span {
-  color: var(--GO-brand-Tahoe-Blue, #20367c);
+  color: var(--brand-primary, #20367c);
   /* H2/Desktop */
   font-family: "Noto Sans";
   font-size: 3rem;

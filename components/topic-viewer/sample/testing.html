@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Topic Viewer Accordion</title>
+
+    <style>
+      .ftgg {
+        container-type: inline-size;
+        container-name: good;
+        position: relative;
+
+      }
+
+       @keyframes fade {
+         0% {
+          opacity: 0;
+          }
+       100% {
+      opacity: 1;
+      }
+      }
+
+         details[open] {
+           animation: fade 0.8s ease-out;
+         }
+
+
+      @container good (min-width: 120ch) {
+        .ftgg-container {
+            display: flex;
+          justify-content: space-between;
+        gap: 1em;
+
+          > section {
+            padding: 1em;
+          }
+
+          > section:first-child {
+            width: calc(20vw - 2em);
+            border-right: 1px solid grey;
+          }
+
+        > section:last-child {
+
+          width: calc(80vw - 4em);
+        }
+
+          details[open] > .accordion-body {
+
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: calc(80vw - 4em);
+          }
+
+
+        }
+
+
+
+      }
+
+
+
+
+      cagov-accordion details {
+        border-radius: var(--radius-2, 5px) !important;
+        margin-bottom: 0;
+        min-height: var(--s-5, 3rem);
+        margin-top: 0.5rem;
+        border: solid var(--border-1, 1px) var(--gray-200, #d4d4d7) !important;
+      }
+      cagov-accordion details summary {
+        cursor: pointer;
+        padding: var(--s-1, 0.5rem) var(--s-5, 3rem) var(--s-1, 0.5rem) var(--s-2, 1rem);
+        background-color: var(--gray-50, #fafafa);
+        position: relative;
+        line-height: var(--s-4, 2rem);
+        margin: 0;
+        color: var(--primary-700, #165ac2);
+        font-size: var(--font-size-2, 1.125rem);
+        font-weight: bold;
+      }
+      cagov-accordion details summary:hover {
+        background-color: var(--gray-100, #fafafa);
+        color: var(--primary-900, #003688);
+      }
+      cagov-accordion details .accordion-body {
+        padding: var(--s-2, 1rem);
+      }
+
+      /* styles applied after custom element javascript runs */
+      cagov-accordion:defined {
+        /* let it be open initially if details has open attribute */
+      }
+      cagov-accordion:defined details {
+        transition: height var(--animation-duration-2, 0.2s);
+        height: var(--s-5, 3rem);
+        overflow: hidden;
+      }
+      cagov-accordion:defined details[open] {
+        height: auto;
+      }
+      cagov-accordion:defined summary::-webkit-details-marker {
+        display: none;
+      }
+      cagov-accordion:defined details summary {
+        list-style: none; /* hide default expansion triangle after js executes */
+        border-radius: var(--border-5, 5px) var(--border-5, 5px) 0 0;
+      }
+      cagov-accordion:defined details summary:focus {
+        outline-offset: -2px;
+        outline: solid 2px var(--accent2-500, #ac8227) !important;
+        background-color: var(--gray-100, #fafafa);
+      }
+      cagov-accordion:defined details .cagov-open-indicator {
+        background-color: var(--primary-700, #165ac2);
+        height: 3px;
+        width: 15px;
+        border-radius: var(--border-3, 3px);
+        position: absolute;
+        right: var(--s-2, 1rem);
+        top: 1.4rem;
+      }
+      cagov-accordion:defined details .cagov-open-indicator:before {
+        display: block;
+        content: "";
+        position: absolute;
+        top: -6px;
+        left: 3px;
+        width: 3px;
+        height: 15px;
+        border-radius: var(--border-3, 3px);
+        border: none;
+        box-shadow: 3px 0 0 0 var(--primary-700, #165ac2);
+        background: none;
+      }
+      cagov-accordion:defined details[open] .cagov-open-indicator:before {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ftgg">
+      <div class="ftgg-container">
+        <section class="accordions">
+          <h4>Progress in your community</h4>
+          <cagov-accordion>
+            <details open>
+              <summary>
+                <span>01</span>The most ambitious climate action plan in the
+                world
+              </summary>
+              <div class="accordion-body">
+                <figure>
+                  <img src="" alt="Image goes here" />
+                </figure>
+                <p class="topic-category">Topic Category</p>
+                <span>Large Headline</span>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Nulla, corporis earum! Veritatis vitae natus accusamus. Ut
+                  necessitatibus esse laboriosam doloremque tempore cupiditate
+                  itaque at rerum excepturi expedita culpa, saepe voluptate.
+                </p>
+                <ul>
+                  <li>List item 1</li>
+                  <li>List item 2</li>
+                  <li>List item 3</li>
+                </ul>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Fugiat, tenetur sed. Qui illum alias, ad a aut voluptatem rem.
+                  Laudantium, deleniti in! Saepe, pariatur praesentium.
+                  Blanditiis illo vero labore adipisci.
+                </p>
+              </div>
+            </details>
+          </cagov-accordion>
+          <cagov-accordion>
+            <details>
+              <summary>
+                <span>02</span>Investing in workers and families
+              </summary>
+              <div class="accordion-body">
+                <figure>
+                  <img src="" alt="Image goes here" />
+                </figure>
+                <p class="topic-category">Topic Category</p>
+                <span>Large Headline</span>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Nulla, corporis earum! Veritatis vitae natus accusamus. Ut
+                  necessitatibus esse laboriosam doloremque tempore cupiditate
+                  itaque at rerum excepturi expedita culpa, saepe voluptate.
+                </p>
+                <ul>
+                  <li>List item 1</li>
+                  <li>List item 2</li>
+                  <li>List item 3</li>
+                </ul>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Fugiat, tenetur sed. Qui illum alias, ad a aut voluptatem rem.
+                  Laudantium, deleniti in! Saepe, pariatur praesentium.
+                  Blanditiis illo vero labore adipisci.
+                </p>
+              </div>
+            </details>
+          </cagov-accordion>
+          <cagov-accordion>
+            <details>
+              <summary><span>03</span>Keeping Californians Safe</summary>
+              <div class="accordion-body">
+                <figure>
+                  <img
+                    src="../images/c12.png"
+                    alt="Governor Newsom picking up trash" />
+                </figure>
+                <p class="topic-category">Public safety</p>
+                <span>Keeping Californians Safe</span>
+                <p>
+                  Under Governor Newsom, California has made major investments
+                  in local law enforcement and prosecutors to combat violent
+                  crime. The Governor is deploying a Public Safety Plan backed
+                  by a record investment to:
+                </p>
+                <ul>
+                  <li>combat organized retail theft</li>
+                  <li>increase opioid enforcement</li>
+                  <li>address gun violence</li>
+                </ul>
+                <p>
+                  Part of the Public Safety Plan includes a multi-year
+                  recruitment campaign to fill 1,000 CHP vacancies.
+                </p>
+              </div>
+            </details>
+          </cagov-accordion>
+        </section>
+        <section class="empty-space"></section>
+      </div>
+    </div>
+    <script>
+          var details = [...document.querySelectorAll('details')];
+      document.addEventListener('click', function(e) {
+        if (!details.some(f => f.contains(e.target))) {
+          details.forEach(f => f.removeAttribute('open'));
+        } else {
+          details.forEach(f => !f.contains(e.target) ? f.removeAttribute('open') : '');
+        }
+      })
+    </script>
+  </body>
+</html>

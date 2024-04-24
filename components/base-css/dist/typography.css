@@ -1,17 +1,13 @@
-p {
-  line-height: 1.6;
+/**** Sets rule for lead text ****/
+h1 + p {
+  font-size: calc(var(--lt) - 0.02rem);
+  line-height: 1.5;
 }
 
-/* Sets rule for lead text */
 h1 {
   font-weight: 600;
   font-size: var(--h1);
   line-height: 1.619;
-
-  + p {
-    font-size: calc(var(--lt) - 0.02rem);
-    line-height: 1.5;
-  }
 }
 
 h2 {
@@ -39,4 +35,8 @@ h5 {
 
 li + li {
   margin-top: 0.5rem;
+}
+
+p {
+  line-height: 1.6;
 }

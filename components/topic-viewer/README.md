@@ -1,17 +1,8 @@
-<link
-  rel="stylesheet"
-  href="../node_modules/@cagovweb/go-site-base-css/dist/variables.css" />
-<link
-  rel="stylesheet"
-  href="../node_modules/@cagovweb/go-site-base-css/dist/fonts.css" />
-<link
-  rel="stylesheet"
-  href="../node_modules/@cagovweb/go-site-base-css/dist/page.css" />
-<link
-  rel="stylesheet"
-  href="../node_modules/@cagovweb/go-site-base-css/dist/typography.css" />
-<link rel="stylesheet" href="../dist/style.css" />
+# `go-site-topic-viewer`
 
+Topic viewer for GO site
+
+```html
 <div class="topic-viewer-container">
   <div class="topics">
     <h4>Progress in your community</h4>
@@ -235,3 +226,4 @@
     <!-- Add more content sections as needed -->
   </div>
 </div>
+```

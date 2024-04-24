@@ -3,12 +3,45 @@
   margin: 0;
 }
 
-/* Focus Styles | thanks Stephanie Eckles */
+nav ul {
+  list-style: none;
+  padding: 0;
 
+  & li {
+    margin-block-start: calc(var(--flow-space) + 0.25rem);
+  }
+}
+
+/** BEGIN Main body **/
+body {
+  min-height: 100vh;
+  font-size: clamp(1rem, var(--base), 5rem);
+  flex-direction: column;
+  color: var(--grey-text);
+
+  /* the last font listed is the one used */
+  font-family: "Noto Sans", "Roboto", "Inter", sans-serif;
+  letter-spacing: 0.02rem;
+  line-height: 1rem;
+  font-weight: 400;
+}
+
+/* Global margin */
+main * + * {
+  margin-block-start: var(--flow-space);
+}
+
+blockquote {
+  border-left: rgba(0, 0, 0, 0.12) 2px solid;
+  margin-left: 0;
+  padding-left: calc(2ch + 0.5rem);
+}
+
+/* Focus Styles | thanks Stephanie Eckles */
 :is(a, button, input, textarea, summary) {
-  --outline-size: max(2px, 0.08rem);
+  --outline-size: max(2px, 0.08em);
   --outline-style: solid;
-  --outline-color: currentcolor;
+  --outline-color: currentColor;
 
   &:focus {
     outline: var(--outline-size) var(--outline-style) var(--outline-color);
@@ -40,17 +73,35 @@
 
 /** END Accessibility backward compatibility **/
 
-@media (prefers-reduced-motion) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+/** Run-in List CSS **/
+.run-in,
+.run-in li {
+  padding: 0;
+  background: none;
+  display: inline;
+  margin-right: 1rem;
+}
+.run-in li::after {
+  content: "";
 }
 
-@media (prefers-color-scheme: dark) {
-  /* Add dark mode styles here */
+.run-in li:last-child::after {
+  content: "";
+}
+
+/** TABLET PORTRAIT UP **/
+@media (min-width: 600px) {
+}
+/** TABLET LANDSCAPE UP **/
+@media (min-width: 900px) {
+}
+/** DESKTOP UP **/
+@media (min-width: 1200px) {
+}
+/** TABLET BIG-DESKTOP UP **/
+@media (min-width: 1800px) {
+}
+
+article > header ~ * {
+  margin-top: 0.15rem;
 }
