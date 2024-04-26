@@ -5,7 +5,7 @@ Footer for GO site
 ```html
 <footer role="contentinfo">
   <section class="footer-primary">
-     <div><img src="https://www.gov.ca.gov/wp-content/uploads/2019/01/Artboard-2@0.5x.png"/ alt="Seal of the Governor of the State of California" /> <p>Office of Governor <strong>Gavin Newsom</strong></div>
+     <div><img src="../images/gov-seal.svg" alt="Seal of the Governor of the State of California" /> <p>Office of Governor <strong>Gavin Newsom</strong></div>
     <div> <nav role="navigation" aria-labelledby="about">
         <h3 id="about">About</h3>
         <ul>
@@ -58,9 +58,10 @@ Footer for GO site
      <nav role="navigation" aria-description="social media links">
         <ul class="flex">
         <li><a href=""><img src="../images/share-facebook.svg" alt=""></a></li>
-        <li> <a href=""><img src="../images/share-instagram.svg" alt=""></a> </li>
-        <li><a href=""><img src="../images/share-tictok.svg" alt=""></a></li>
-        <li> <a href=""><img src="../images/share-twitter-X.svg" alt=""></a> </li>
+        <li><a href=""><img src="../images/share-instagram.svg" alt=""></a></li>
+        <li><a href=""><img src="../images/share-tiktok.svg" alt=""></a></li>
+        <li><a href=""><img src="../images/share-twitter-X.svg" alt=""></a></li>
+        <li><a href=""><img src="../images/share-youtube.svg" alt=""></a></li>
      </nav>
   </section>
   <section id="publishing" aria-desctiption="website publishing information">

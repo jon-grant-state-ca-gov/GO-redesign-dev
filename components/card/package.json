@@ -1,6 +1,6 @@
 {
   "name": "@cagovweb/go-site-card",
-  "version": "0.0.1-beta2",
+  "version": "0.0.1-beta3",
   "description": "Card for GO site update",
   "type": "module",
   "main": "dist/style.css",
@@ -28,6 +28,6 @@
     "NPM deprecate old version": "npm deprecate @cagovweb/go-site-card@0.0.1-beta1 \"Version no longer supported. Upgrade to @latest\""
   },
   "dependencies": {
-    "@cagovweb/go-site-base-css": "^0.0.1-beta3"
+    "@cagovweb/go-site-base-css": "^0.0.1-beta5"
   }
 }

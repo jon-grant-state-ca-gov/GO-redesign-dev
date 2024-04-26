@@ -28,6 +28,6 @@
     "NPM publish": "npm publish"
   },
   "dependencies": {
-    "@cagovweb/go-site-base-css": "^0.0.1-beta3"
+    "@cagovweb/go-site-base-css": "^0.0.1-beta5"
   }
 }
