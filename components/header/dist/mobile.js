@@ -41,27 +41,23 @@ window.addEventListener("load", () => {
 
       // Toggle Header
       if (direction === 2 && curScroll > scrollNum) {
+        // Hide nav, logo, caGovToggle on scroll down
         mainheader.classList.add("mobile");
         caGovToggle.classList.add("hidden");
-        logo.style.display = "none";
-        navigation.style.display = "none";
-        mainheader.style.background = "transparent";
-        mainheader.style.boxShadow = "none";
+        logo.classList.add("hidden");
+        navigation.classList.add("hidden");
+        mainheader.classList.add("transparent-bg remove-box-shadow");
         sidebar.classList.add("sidebar-mobile");
         prevDirection = direction;
       } else if (direction === 1 && curScroll < scrollNum) {
         if (window.innerWidth > 1080) {
           mainheader.classList.remove("mobile");
           caGovToggle.classList.remove("hidden");
-          navigation.style.display = "block";
-          mainheader.style.background = "var(--grey-background, #eee)";
+          navigation.classList.remove("hidden");
+          mainheader.classList.add("gray-bg");
         }
         sidebar.classList.remove("sidebar-mobile");
-        mainheader.style.background = "var(--grey-background, #eee)";
-        mainheader.style.boxShadow =
-          "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)";
-        logo.style.display = "block";
-        caGovToggle.style.display = "block";
+        logo.classList.remove("hidden");
         prevDirection = direction;
       }
     }
@@ -93,24 +89,19 @@ window.addEventListener("load", () => {
       this.ariaExpanded = this.ariaExpanded !== "true";
 
       if ("true" === this.ariaExpanded) {
-        navigation.style.display = "block";
-        mainheader.style.background = "var(--grey-background, #eee)";
-        mainheader.style.boxShadow =
-          "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)";
-        logo.style.display = "block";
-        caGovToggle.style.display = "block";
+        navigation.classList.remove("hidden");
+        mainheader.classList.add("gray-bg add-box-shadow");
+        logo.classList.remove("hidden");
+        caGovToggle.classList.remove("hidden");
         if (window.innerWidth > 1080) {
-          mainheader.style.background = "var(--grey-background, #eee)";
-          mainheader.style.boxShadow =
-            "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)";
+          mainheader.classList.add("gray-bg add-box-shadow");
         }
       } else {
-        navigation.style.display = "none";
+        navigation.classList.add("hidden");
         if (window.innerWidth > 1080) {
-          mainheader.style.background = "transparent";
-          mainheader.style.boxShadow = "none";
-          logo.style.display = "block";
-          caGovToggle.style.display = "block";
+          mainheader.classList.add("transparent-bg remove-box-shadow");
+          logo.classList.add("hidden");
+          caGovToggle.classList.remove("hidden");
         }
       }
     });

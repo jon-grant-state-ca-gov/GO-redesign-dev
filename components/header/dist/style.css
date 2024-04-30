@@ -129,7 +129,12 @@ header {
 
   .cagov-animated {
     height: 3rem;
+    transition: 0.3s all ease-in;
     width: 3rem;
+
+    &:hover {
+      box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
   }
 
   .testing-animation {
@@ -145,7 +150,7 @@ header {
     z-index: calc(infinity);
 
     .ca-gov-svg:hover {
-      box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      /* box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25); */
       /* background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 48 48" fill="none"><circle cx="4.00024" cy="4" r="4" fill="%2320367C"/><path d="M19.9758 4C19.9758 6.20914 18.185 8 15.9758 8C13.7667 8 11.9758 6.20914 11.9758 4C11.9758 1.79086 13.7667 0 15.9758 0C18.185 0 19.9758 1.79086 19.9758 4Z" fill="%2320367C" fill-opacity="0.75"/><circle cx="27.9519" cy="4" r="4" fill="%2320367C"/><circle cx="4.00024" cy="16" r="4" fill="%2320367C" fill-opacity="0.75"/><circle cx="15.9758" cy="16" r="4" fill="%2320367C" fill-opacity="0.5"/><circle cx="27.9519" cy="16" r="4" fill="%2320367C" fill-opacity="0.75"/><circle cx="4" cy="28" r="4" fill="%2320367C"/><circle cx="15.9756" cy="28" r="4" fill="%2320367C" fill-opacity="0.75"/><circle cx="27.9517" cy="28" r="4" fill="%2320367C"/></svg>'); */
     }
 
@@ -276,6 +281,7 @@ header {
   }
 
   .hidden {
+    box-shadow: none;
     display: none;
   }
 
@@ -310,8 +316,8 @@ header {
   /* Header Mobile View Styles */
   &.mobile {
     position: fixed;
-    /* background: transparent; */
-    /* box-shadow: none; */
+    background: transparent;
+    box-shadow: none;
     justify-content: space-between;
     flex: 1;
 
@@ -320,13 +326,31 @@ header {
     }
 
     .logo {
-      display: block;
-      margin-right: 8rem;
+      /* display: block; */
+      /* margin-right: 8rem; */
 
       & figure > a > img {
         height: 5vh;
         width: 40vw;
       }
+    }
+
+    .transparent-bg {
+      background: transparent;
+    }
+
+    .gray-bg {
+      background: var(--grey-background, #eee);
+    }
+
+    .add-box-shadow {
+      box-shadow:
+        0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .remove-box-shadow {
+      box-shadow: none;
     }
 
     #ca_gov_sidebar {
