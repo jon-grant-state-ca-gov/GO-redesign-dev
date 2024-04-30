@@ -46,6 +46,7 @@ window.addEventListener("load", () => {
         logo.style.display = "none";
         navigation.style.display = "none";
         mainheader.style.background = "transparent";
+        mainheader.style.boxShadow = "none";
         sidebar.classList.add("sidebar-mobile");
         prevDirection = direction;
       } else if (direction === 1 && curScroll < scrollNum) {

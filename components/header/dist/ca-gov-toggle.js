@@ -6,6 +6,7 @@ window.addEventListener("load", () => {
   const moreServicesContainer = document.getElementById(
     "more_services_container"
   );
+  const animatedCaGovIcon = document.querySelector("svg.cagov-animated");
 
   if (!sidebar || !sidebarToggle) return;
 
@@ -13,9 +14,11 @@ window.addEventListener("load", () => {
     if (sidebarToggle.classList.contains("ca-gov-svg")) {
       sidebarToggle.classList.add("ca-gov-close-icon");
       sidebarToggle.classList.remove("ca-gov-svg");
+      animatedCaGovIcon.style.display = "none";
     } else {
       sidebarToggle.classList.remove("ca-gov-close-icon");
       sidebarToggle.classList.add("ca-gov-svg");
+      animatedCaGovIcon.style.display = "block";
     }
     sidebar.style.display =
       sidebar.style.display !== "block" ? "block" : "none";
