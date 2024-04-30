@@ -466,7 +466,7 @@ body {
   font-family: "Public Sans";
   font-family: "Noto Sans";
   letter-spacing: 0.02rem;
-  line-height: 1rem;
+  line-height: 1.5rem;
 
   /*Change font weight for the base: Imported 100, 200, 300, 400, 500, 600, 700 */
   font-weight: 400;

@@ -1,14 +1,14 @@
 {
-  "name": "@cagovweb/go-site-base-css",
-  "version": "0.0.1-beta6",
-  "description": "Base styles for GO site update",
+  "name": "@cagovweb/go-site-header",
+  "version": "0.0.1-beta9",
+  "description": "Header for GO site update",
   "type": "module",
-  "main": "dist",
+  "main": "dist/style.css",
   "homepage": "https://jon-grant-state-ca-gov.github.io/GO-redesign-dev/",
   "repository": {
     "type": "git",
     "url": "https://github.com/jon-grant-state-ca-gov/GO-redesign-dev",
-    "directory": "components/base-css"
+    "directory": "components/header"
   },
   "bugs": "https://github.com/jon-grant-state-ca-gov/GO-redesign-dev/issues",
   "author": {
@@ -22,8 +22,12 @@
   },
   "license": "ISC",
   "scripts": {
+    "build": "rollup --config src/rollup.config.mjs",
     "NPM Publish (dry run)": "npm publish --dry-run",
     "NPM Publish (view package)": "npm pack",
     "NPM publish": "npm publish"
+  },
+  "dependencies": {
+    "@cagovweb/go-site-base-css": "^0.0.1-beta5"
   }
 }
