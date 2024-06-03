@@ -5,7 +5,7 @@ Footer for GO site
 ```html
 <footer role="contentinfo">
   <section class="footer-primary">
-     <div><img src="../images/gov-seal.svg" alt="Seal of the Governor of the State of California" /> <p>Office of Governor <strong>Gavin Newsom</strong></div>
+     <div><img src="../images/gov-seal.png" alt="Seal of the Governor of the State of California" /> <p>Office of Governor <strong>Gavin Newsom</strong></div>
     <div> <nav role="navigation" aria-labelledby="about">
         <h3 id="about">About</h3>
         <ul>

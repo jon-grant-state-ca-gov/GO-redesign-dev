@@ -1,0 +1,177 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap);
+main {
+  font-family: "Noto Sans";
+}
+
+section button {
+  background: var(--brand-secondary, #1b499b);
+  box-shadow: -2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  color: #fff;
+}
+
+/* Start of Koji's stuff */
+.spotlight {
+  flex-basis: 50%;
+}
+.spotlight > article {
+  display: none;
+}
+.spotlight > article img {
+  width: 40rem;
+}
+
+.spotlight-list-wrapper h2 {
+  color: var(--GO-brand-Tahoe-Blue, #20367c);
+  font-size: 3.375rem;
+  font-weight: 700;
+}
+
+.spotlight-list *:has(*:target) article:not(*:target) {
+  display: none;
+}
+
+.js-enabled ul.spotlight-select {
+  display: none;
+  list-style: none;
+  margin-inline: 0;
+  padding: 0;
+}
+.js-enabled ul.spotlight-select li {
+  margin-block-start: 0;
+}
+.js-enabled ul.spotlight-select li + li {
+  border-top: 1px solid #b6b6b6;
+}
+.js-enabled ul.spotlight-select li > * {
+  align-self: center;
+}
+.js-enabled ul.spotlight-select a {
+  padding-block: 1.65cqi;
+  display: block;
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--text-dark, #323232);
+  padding-inline-end: 4rem;
+  font-size: 1.5rem;
+  position: relative;
+}
+.js-enabled ul.spotlight-select a:hover {
+  color: var(--brand-hover-dark, #0073a5);
+  text-decoration: underline;
+}
+.js-enabled ul.spotlight-select [aria-current=location] {
+  color: var(--brand-primary, #20367c);
+  font-weight: 700;
+  text-decoration: underline;
+}
+.js-enabled ul.spotlight-select a:hover::after {
+  background-image: url("data:image/svg+xml,<svg width=\"37\" height=\"42\" viewBox=\"0 0 37 42\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M14.6183 9.42816L25.6648 20.4746H1H0.5V20.9746V25.2246V25.7246H1H25.6648L14.6183 36.7711L14.2616 37.1278L14.6215 37.4813L17.6496 40.4563L18.0031 40.8036L18.3536 40.4532L35.3536 23.4532L35.7071 23.0996L35.3536 22.7461L18.3536 5.74606L18.0031 5.39562L17.6496 5.74294L14.6215 8.71794L14.2616 9.07147L14.6183 9.42816Z\" fill=\"%230073a5\" stroke=\"%23F26522\"/></svg>");
+  content: "";
+  background-size: cover;
+  height: 1.5rem;
+  width: 1.25rem;
+  /* right: var(--flow-space); */
+  left: 0;
+  /* top: calc(1.65cqi / 2 + 0.5rem); */
+  position: absolute;
+}
+.js-enabled ul.spotlight-select [aria-current=location]::after {
+  background-image: url("data:image/svg+xml,<svg width=\"37\" height=\"42\" viewBox=\"0 0 37 42\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M14.6183 9.42816L25.6648 20.4746H1H0.5V20.9746V25.2246V25.7246H1H25.6648L14.6183 36.7711L14.2616 37.1278L14.6215 37.4813L17.6496 40.4563L18.0031 40.8036L18.3536 40.4532L35.3536 23.4532L35.7071 23.0996L35.3536 22.7461L18.3536 5.74606L18.0031 5.39562L17.6496 5.74294L14.6215 8.71794L14.2616 9.07147L14.6183 9.42816Z\" fill=\"%23F26522\" stroke=\"%23F26522\"/></svg>");
+  content: "";
+  background-size: cover;
+  height: 1.5rem;
+  width: 1.25rem;
+  /* right: var(--flow-space); */
+  left: 0;
+  /* top: calc(1.65cqi / 2 + 0.5rem); */
+  position: absolute;
+}
+.js-enabled ul.spotlight-select a:active {
+  color: #0057ad;
+}
+
+.accomplishment-type {
+  color: #6d6d6d;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.accomplishment-title {
+  color: var(--primary-brand, #20367c);
+  font-size: 3.375rem;
+  font-weight: 700;
+}
+
+.accomplishment-content {
+  color: #494949;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+select {
+  display: block;
+  width: 100%;
+  border-radius: 0.25rem;
+  background-color: transparent;
+  padding: 0.5rem;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.spotlight > article:target,
+.spotlight > *:first-child {
+  display: block;
+  animation: fade 0.8s ease-out;
+}
+
+.spotlight-list {
+  container-type: inline-size;
+  container-name: spotlightlist;
+}
+.spotlight-list div {
+  padding: 1rem;
+}
+
+.js-enabled select {
+  display: block;
+}
+
+@container spotlightlist (min-width: 80rem) {
+  .js-enabled ul.spotlight-select {
+    display: block;
+  }
+  .js-enabled select {
+    display: none;
+  }
+  .spotlight-list-wrapper {
+    display: flex;
+    gap: var(--flow-space);
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+  }
+  .spotlight-list-wrapper > * {
+    flex-basis: 1 1 30ch;
+    margin-block-start: unset;
+  }
+  .spotlight-list-wrapper > *:first-child {
+    flex-basis: 50%;
+  }
+  .spotlight-list-wrapper > *:last-child {
+    /* flex-grow: 2; */
+    position: sticky;
+    top: 0;
+  }
+}
+/* End of Koji's stuff */

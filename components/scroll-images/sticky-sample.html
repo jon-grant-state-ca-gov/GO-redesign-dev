@@ -1,0 +1,108 @@
+<style>
+    .container{
+    scroll-snap-type: y mandatory;
+    /*overflow-y: scroll;*/
+    /*height: 50vh;*/
+
+  }
+  .sticky {
+    position: sticky;
+    position: -webkit-sticky;
+    background: red;
+    height: 50vh;
+    top:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+  .blue-background{
+    background: blue;
+  }
+  .extra,
+  .wrapper {
+    width: 100%;
+    background-color: #ccc;
+    display: flex;
+    flex-flow: row nowrap;
+    scroll-snap-align: start;
+  }
+  .content{
+      width:50%;
+  }
+  /* #wrapper {
+    height: 800px;
+  } */
+  .extra {
+    height: 100px;
+  }
+  body {
+    font-family: georgia;
+  }
+  h4 {
+    text-align: center;
+  }
+</style>
+
+<div class="container">
+  <div class="wrapper">
+    <div class="content">
+      <h1>start</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>end</h1>
+    </div>
+    <div class="content">
+      <div class="sticky">sticky</div>
+    </div>
+  </div>
+  <div class="wrapper">
+    <div class="content">
+      <h1>start</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>test</h1>
+      <h1>end</h1>
+    </div>
+    <div class="content">
+      <div class="sticky blue-background">sticky</div>
+    </div>
+  </div>
+</div>
