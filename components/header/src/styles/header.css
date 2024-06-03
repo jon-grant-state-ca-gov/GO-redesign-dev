@@ -348,6 +348,10 @@ header.mobile {
 header.mobile .mobile {
   display: block;
 }
+header.mobile div.logo {
+  margin-right: 0;
+  padding-inline-start: 4rem;
+}
 header.mobile .logo figure,
 header.mobile .logo img {
   height: 5vh;
