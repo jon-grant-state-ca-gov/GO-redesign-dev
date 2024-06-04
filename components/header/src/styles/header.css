@@ -45,6 +45,7 @@
 
 /* End of Move to Global */
 header {
+  align-items: center;
   container-type: inline-size;
   container-name: header;
   display: flex;
@@ -94,7 +95,7 @@ header .navigation {
 }
 header .navigation nav {
   display: flex;
-  height: 100%;
+  /* height: 100%; */
 }
 header .navigation nav ul {
   display: flex;
@@ -105,6 +106,7 @@ header .navigation nav ul li {
   margin: 0;
   padding-right: 3rem;
   align-self: center;
+  margin-inline-end: clamp(0.5rem, 3vw, 1.25rem);
   /* Anchor links */
 }
 header .navigation nav ul li a {
