@@ -218,7 +218,11 @@ window.addEventListener("load", () => {
     // Mobile Only
     if (window.innerWidth < 1080) {
       // Any scroll on mobile displays hamburger menu only
-      hideMobileHeader();
+      // Clicking hamburger menu triggers scroll listener on CDEV
+      // Add check to not hide mobile header if navigation menu is visible
+      if (navigation?.classList.contains("hidden")) {
+        hideMobileHeader();
+      }
 
       // Show at top of the page
       if (curScroll === 0) {
