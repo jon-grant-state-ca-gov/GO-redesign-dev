@@ -1,6 +1,6 @@
 {
   "name": "@cagovweb/go-site-footer",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "Footer for GO site update",
   "type": "module",
   "main": "build/index.js",

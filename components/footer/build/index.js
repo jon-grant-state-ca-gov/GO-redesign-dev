@@ -9,42 +9,6 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
 
-/***/ }),
-/* 2 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "images/gov-seal.png";
-
-/***/ }),
-/* 3 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "fonts/share-facebook.svg";
-
-/***/ }),
-/* 4 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "fonts/share-instagram.svg";
-
-/***/ }),
-/* 5 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "fonts/share-tiktok.svg";
-
-/***/ }),
-/* 6 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "fonts/share-twitter-X.svg";
-
-/***/ }),
-/* 7 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "fonts/share-youtube.svg";
-
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -84,32 +48,13 @@ module.exports = __webpack_require__.p + "fonts/share-youtube.svg";
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/publicPath */
-/******/ 	(() => {
-/******/ 		__webpack_require__.p = "./";
-/******/ 	})();
-/******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_footer_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _images_gov_seal_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
-/* harmony import */ var _images_share_facebook_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
-/* harmony import */ var _images_share_instagram_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
-/* harmony import */ var _images_share_tiktok_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
-/* harmony import */ var _images_share_twitter_X_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
-/* harmony import */ var _images_share_youtube_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
 // Styles
-
-
-// Assets
-
-
-
-
-
 
 })();
 

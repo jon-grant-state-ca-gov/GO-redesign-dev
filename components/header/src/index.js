@@ -5,6 +5,3 @@ import "./scripts/search.js";
 
 // Styles
 import "./styles/header.css";
-
-// Assets
-import "./images/gov-branding.svg";

@@ -297,7 +297,9 @@ window.addEventListener("load", () => {
     } else {
       // Desktop Only
       // Any scroll on desktop displays hamburger menu only
-      hideDesktopHeader();
+      if (sidebar?.style.display === "none") {
+        hideDesktopHeader();
+      }
 
       // Show at top of the page
       if (curScroll === 0) {
@@ -389,12 +391,6 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
 
-/***/ }),
-/* 5 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "fonts/gov-branding.svg";
-
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -434,11 +430,6 @@ module.exports = __webpack_require__.p + "fonts/gov-branding.svg";
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/publicPath */
-/******/ 	(() => {
-/******/ 		__webpack_require__.p = "./";
-/******/ 	})();
-/******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
@@ -448,16 +439,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scripts_mobile_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var _scripts_search_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
 /* harmony import */ var _styles_header_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
-/* harmony import */ var _images_gov_branding_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
 // Scripts
 
 
 
 
 // Styles
-
-
-// Assets
 
 })();
 
