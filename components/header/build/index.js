@@ -297,7 +297,7 @@ window.addEventListener("load", () => {
     } else {
       // Desktop Only
       // Any scroll on desktop displays hamburger menu only
-      if (sidebar?.style.display === "none") {
+      if (!sidebar?.style.display || sidebar?.style.display === "none") {
         hideDesktopHeader();
       }
 
