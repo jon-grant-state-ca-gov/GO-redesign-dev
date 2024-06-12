@@ -23,6 +23,7 @@ window.addEventListener("load", () => {
   searchInput.addEventListener("focusout", () => {
     if (window.innerWidth > 1080) {
       searchInput.classList.remove("focus-search-box");
+      searchInput.value = "";
     }
   });
 });

@@ -134,3 +134,6 @@ out
 
 # for this site
 _site
+
+# Global CSS at root
+/*.css
