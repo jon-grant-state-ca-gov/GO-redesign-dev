@@ -154,7 +154,7 @@ header nav li.search {
   text-align: right;
 }
 header nav li.search .search-container input[type="submit"] {
-  display: none;
+  display: block;
 }
 header nav li.search .search-close-icon {
   background: transparent;
