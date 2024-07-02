@@ -55,6 +55,7 @@ window.addEventListener("load", () => {
 
   const closeCaGovMenu = () => {
     sidebarToggle.classList.add("ca-gov-svg");
+    sidebarToggle.ariaLabel = "Open the CA.gov menu";
     sidebarToggle.classList.remove("ca-gov-close-icon");
     animatedCaGovIcon.style.display = "block";
     sidebar.style.display = "none";
@@ -73,11 +74,13 @@ window.addEventListener("load", () => {
 
     if (sidebarToggle.classList.contains("ca-gov-svg")) {
       sidebarToggle.classList.add("ca-gov-close-icon");
+      sidebarToggle.ariaLabel = "Close the CA.gov menu";
       sidebarToggle.classList.remove("ca-gov-svg");
       animatedCaGovIcon.style.display = "none";
     } else {
       sidebarToggle.classList.remove("ca-gov-close-icon");
       sidebarToggle.classList.add("ca-gov-svg");
+      sidebarToggle.ariaLabel = "Open the CA.gov menu";
       animatedCaGovIcon.style.display = "block";
     }
 

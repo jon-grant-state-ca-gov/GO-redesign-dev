@@ -25,13 +25,13 @@ window.addEventListener("load", () => {
       "remove-box-shadow",
       "compacted"
     );
-    logo.classList.add("hidden");
+    logo?.classList.add("hidden");
     navigation?.classList.add("hidden");
-    caGovToggle.classList.add("hidden");
+    caGovToggle?.classList.add("hidden");
   }
   //If mobile
   if (window.innerWidth < 1080) {
-    mainheader.classList.add("mobile", "gray-bg");
+    mainheader?.classList.add("mobile", "gray-bg");
     navigation?.classList.add("hidden");
   }
 
@@ -50,50 +50,59 @@ window.addEventListener("load", () => {
 
   const closeHamburgerMenu = () => {
     document.body.style.overflow = "auto";
-    navigation.classList.add("hidden");
-    navToggle.ariaExpanded = "false";
+    navigation?.classList.add("hidden");
+    if (navToggle) {
+      navToggle.ariaExpanded = "false";
+      navToggle.ariaLabel = "Open the navigation menu";
+    }
   };
 
   const hideMobileHeader = () => {
-    mainheader.classList.remove("gray-bg");
-    mainheader.classList.add("transparent-bg", "remove-box-shadow");
-    logo.classList.add("hidden");
-    caGovToggle.classList.add("hidden");
+    mainheader?.classList.remove("gray-bg");
+    mainheader?.classList.add("transparent-bg", "remove-box-shadow");
+    logo?.classList.add("hidden");
+    caGovToggle?.classList.add("hidden");
   };
 
   const showMobileHeader = () => {
-    mainheader.classList.add("gray-bg");
-    mainheader.classList.remove("transparent-bg", "remove-box-shadow");
-    logo.classList.remove("hidden");
-    caGovToggle.classList.remove("hidden");
+    mainheader?.classList.add("gray-bg");
+    mainheader?.classList.remove("transparent-bg", "remove-box-shadow");
+    logo?.classList.remove("hidden");
+    caGovToggle?.classList.remove("hidden");
   };
 
   const hideDesktopHeader = () => {
-    navToggle.ariaExpanded = "false";
-    caGovToggle.classList.add("hidden");
-    mainheader.classList.add(
+    if (navToggle) {
+      navToggle.ariaExpanded = "false";
+      navToggle.ariaLabel = "Open the navigation menu";
+    }
+    caGovToggle?.classList.add("hidden");
+    mainheader?.classList.add(
       "transparent-bg",
       "remove-box-shadow",
       "compacted"
     );
-    logo.classList.add("hidden");
-    navigation.classList.add("hidden");
+    logo?.classList.add("hidden");
+    navigation?.classList.add("hidden");
 
-    sidebar.classList.add("sidebar-mobile");
+    sidebar?.classList.add("sidebar-mobile");
   };
 
   const showDesktopHeader = () => {
-    navToggle.ariaExpanded = "false";
-    caGovToggle.classList.remove("hidden");
-    mainheader.classList.remove(
+    if (navToggle) {
+      navToggle.ariaExpanded = "false";
+      navToggle.ariaLabel = "Open the navigation menu";
+    }
+    caGovToggle?.classList.remove("hidden");
+    mainheader?.classList.remove(
       "transparent-bg",
       "remove-box-shadow",
       "compacted"
     );
-    sidebar.classList.remove("sidebar-mobile");
-    logo.classList.remove("hidden");
-    caGovToggle.classList.remove("hidden");
-    navigation.classList.remove("hidden");
+    sidebar?.classList.remove("sidebar-mobile");
+    logo?.classList.remove("hidden");
+    caGovToggle?.classList.remove("hidden");
+    navigation?.classList.remove("hidden");
   };
 
   if (!mainheader) return;
@@ -162,6 +171,7 @@ window.addEventListener("load", () => {
       if ("true" === this.ariaExpanded) {
         mainheader.classList.remove("transparent-bg", "remove-box-shadow");
         caGovToggle.classList.remove("hidden");
+        navToggle.ariaLabel = "Close the navigation menu";
 
         // Mobile only
         if (window.innerWidth < 1080) {

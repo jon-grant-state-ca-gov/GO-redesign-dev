@@ -14,14 +14,14 @@
   "private": true,
   "type": "module",
   "devDependencies": {
-    "eslint": "^8.56.0",
-    "eslint-plugin-jsdoc": "^48.2.0",
-    "prettier": "^3.0.3",
-    "stylelint": "^16.2.1",
-    "stylelint-config-standard": "^35.0.0",
+    "eslint": "^9.6.0",
+    "eslint-plugin-jsdoc": "^48.5.0",
+    "prettier": "^3.3.2",
+    "stylelint": "^16.6.1",
+    "stylelint-config-standard": "^36.0.1",
     "stylelint-use-nesting": "^5.1.1"
   },
   "dependencies": {
-    "@cagovweb/go-site-card": "^0.0.1-beta2"
+    "@cagovweb/go-site-card": "^0.0.6"
   }
 }

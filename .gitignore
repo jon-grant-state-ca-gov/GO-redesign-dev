@@ -137,3 +137,9 @@ _site
 
 # Global CSS at root
 /*.css
+
+# Public
+**/public
+
+# a11y folder
+**/a11y

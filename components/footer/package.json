@@ -1,6 +1,6 @@
 {
   "name": "@cagovweb/go-site-footer",
-  "version": "0.0.16",
+  "version": "0.0.21",
   "description": "Footer for GO site update",
   "type": "module",
   "main": "build/index.js",
@@ -22,14 +22,15 @@
   },
   "license": "ISC",
   "scripts": {
+    "caweb": "caweb",
     "build": "caweb build",
-    "serve": "caweb serve",
+    "serve": "caweb serve --audit --no-selectors",
     "NPM Publish (dry run)": "npm publish --dry-run",
     "NPM Publish (view package)": "npm pack",
     "NPM publish": "npm publish"
   },
   "dependencies": {
-    "@cagovweb/go-site-base-css": "^0.0.8",
-    "@caweb/cli": "^1.3.17"
+    "@cagovweb/go-site-base-css": "^0.0.9",
+    "@caweb/cli": "^1.4.3"
   }
 }
