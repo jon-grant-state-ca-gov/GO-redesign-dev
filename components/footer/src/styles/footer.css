@@ -17,9 +17,8 @@ footer {
   background-repeat: no-repeat;
   background-position: calc(100% + var(--gutter-gap)) center;
   color: var(--text-white);
-  font-weight: 200;
+  font-weight: 400;
   padding: var(--flow-space);
-  /*delete this for prod*/
 }
 footer section {
   display: flex;
