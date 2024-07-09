@@ -24,13 +24,13 @@
   "scripts": {
     "caweb": "caweb",
     "build": "caweb build",
-    "serve": "caweb serve --audit --no-selectors",
+    "serve": "caweb serve --no-selectors",
     "NPM Publish (dry run)": "npm publish --dry-run",
     "NPM Publish (view package)": "npm pack",
     "NPM publish": "npm publish"
   },
   "dependencies": {
     "@cagovweb/go-site-base-css": "^0.0.9",
-    "@caweb/cli": "^1.4.3"
+    "@caweb/cli": "^1.4.4"
   }
 }
