@@ -6,22 +6,58 @@ window.addEventListener("load", () => {
 
   if (!searchInput) return;
 
-  // document.addEventListener("click", e => {
-  //   console.log(e.target);
-  //   console.log(e.target.nodeName);
+  if (window.innerWidth < 1080) {
+    searchInput.placeholder = "Search";
+  }
 
-  //   if (window.innerWidth > 1080) {
-  //     if (searchInput.classList.contains("focus-search-box")) {
-  //       console.log("Has focus-search-box");
-  //       console.log(e.target?.nodeName);
-  //       if (e.target?.nodeName !== "FORM" || e.target?.nodeName !== "FORM") {
-  //         searchInput.classList.remove("focus-search-box");
-  //         searchInput.value = "";
-  //         searchInput.placeholder = "";
-  //       }
-  //     }
-  //   }
-  // });
+  if (searchInput.value === "") {
+    submitInputButton.classList.remove("search-submit-icon");
+    submitInputButton.classList.add("search-svg-small-icon");
+  } else {
+    submitInputButton.classList.remove("search-svg-small-icon");
+    submitInputButton.classList.add("search-submit-icon");
+  }
+
+  searchSVG.addEventListener("click", () => {
+    console.log("What is search value? ", searchInput.value);
+    if (searchInput.value === "") {
+      submitInputButton.classList.remove("search-submit-icon");
+      submitInputButton.classList.add("search-svg-small-icon");
+    } else {
+      submitInputButton.classList.remove("search-svg-small-icon");
+      submitInputButton.classList.add("search-submit-icon");
+    }
+  });
+
+  document.addEventListener("keyup", () => {
+    console.log("What is search value? ", searchInput.value);
+    if (searchInput.value === "") {
+      submitInputButton.classList.remove("search-submit-icon");
+      submitInputButton.classList.add("search-svg-small-icon");
+    } else {
+      submitInputButton.classList.remove("search-svg-small-icon");
+      submitInputButton.classList.add("search-submit-icon");
+    }
+  });
+
+  document.addEventListener("keyup", e => {
+    if (window.innerWidth > 1080 && e.key === "Escape") {
+      e.stopPropagation();
+      searchInput.classList.remove("focus-search-box");
+      searchInput.value = "";
+      searchInput.placeholder = "";
+    }
+  });
+
+  resetInputButton.addEventListener("click", e => {
+    e.preventDefault();
+    if (window.innerWidth > 1080) {
+      searchInput.classList.remove("focus-search-box");
+      searchInput.placeholder = "";
+    }
+    searchInput.value = "";
+    searchInput.placeholder = "Search";
+  });
 
   searchSVG.addEventListener("click", () => {
     searchInput.focus();

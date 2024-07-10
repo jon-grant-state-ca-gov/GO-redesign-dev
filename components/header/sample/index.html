@@ -5,11 +5,11 @@
     <link
       rel="stylesheet"
       href="../node_modules/@cagovweb/go-site-base-css/build/index.css" />
-    <!-- <link rel="stylesheet" href="../src/styles/header.css" />
+    <link rel="stylesheet" href="../src/styles/header.css" />
     <script src="../src/scripts/ca-gov-toggle.js"></script>
     <script src="../src/scripts/mobile.js"></script>
     <script src="../src/scripts/return-to-top.js"></script>
-    <script src="../src/scripts/search.js"></script> -->
+    <script src="../src/scripts/search.js"></script>
   </head>
 
   <body style="height: 2000px;">
@@ -68,18 +68,41 @@
                 class="search-container"
                 action="search"
                 id="search-form"
-                autocomplete="off">
-                <input type="reset" value="" class="ca-gov-close-icon-small" />
+                autocomplete="off"
+                role="search">
+                <!-- <label for="close_search" id="label_close_search">
+                  <span class="sr-only">Close the search bar</span>
+                </label>
+                <input
+                  id="close_search"
+                  type="reset"
+                  value=""
+                  class="ca-gov-close-icon-small" /> -->
+                <button
+                  id="close_search"
+                  class="ca-gov-close-icon-small"></button>
+                <label for="search-box" id="label_search-box">
+                  <span class="sr-only"
+                    >To search the site, enter a search term</span
+                  >
+                </label>
                 <input
                   id="search-box"
                   type="text"
                   class="search-box search-svg"
                   name="q" />
+                <!-- <label for="search-submit" id="label_search-submit">
+                  <span class="sr-only">Submit the search term</span>
+                </label>
                 <input
                   type="submit"
                   value=""
                   class="search-submit-icon"
-                  id="search-submit" />
+                  id="search-submit" /> -->
+                <button
+                  type="submit"
+                  class="search-submit-icon"
+                  id="search-submit"></button>
               </form>
               <!-- <form
                 class="search-container"
