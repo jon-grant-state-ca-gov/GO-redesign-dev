@@ -198,7 +198,6 @@ header.mobile nav li.search .search-container .search-svg {
 header nav li.search .search-container .search-svg {
   background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="38" height="32" viewBox="0 0 32 32" fill="none"><path d="M0.5 16C0.5 7.43959 7.43959 0.5 16 0.5C24.5604 0.5 31.5 7.43959 31.5 16C31.5 24.5604 24.5604 31.5 16 31.5C7.43959 31.5 0.5 24.5604 0.5 16Z" fill="%23EEEEEE" stroke="%2320367C" /><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" x="8" y="8" viewBox="0 0 17 17" fill="none"><path d="M16.0287 14.7592L12.0315 10.7561C14.0415 8.14002 13.8408 4.36029 11.4286 1.96785C10.1113 0.648892 8.41359 -0.00012207 6.69412 -0.00012207C4.97465 -0.00012207 3.27685 0.647998 1.95961 1.96785C-0.653203 4.5839 -0.653203 8.83255 1.95961 11.4486C3.27694 12.7676 4.97465 13.4166 6.69412 13.4166C8.12312 13.4166 9.55305 12.9693 10.737 12.0522L14.7561 16.0336C14.935 16.2127 15.1583 16.3018 15.4034 16.3018C15.6268 16.3018 15.8728 16.2127 16.0508 16.0336C16.3866 15.6982 16.3866 15.1164 16.0289 14.7592H16.0287ZM6.71583 11.6058C5.3985 11.6058 4.1919 11.0913 3.25411 10.175C1.35575 8.27432 1.35575 5.16655 3.25411 3.24303C4.17015 2.32586 5.3985 1.81226 6.71583 1.81226C8.03316 1.81226 9.23975 2.32675 10.1775 3.24303C11.1154 4.1602 11.6065 5.39007 11.6065 6.70903C11.6065 8.02799 11.0927 9.23608 10.1775 10.175C9.26151 11.114 8.01136 11.6058 6.71583 11.6058Z" fill="%2320367C" /></svg></svg>')
     no-repeat scroll 100%;
-  background-color: #fff;
   border: none;
   cursor: pointer;
   height: 32px;
@@ -235,15 +234,6 @@ header .navigation-mobile #search-box.focus-search-box {
   height: 5vh;
   width: 80vw;
 }
-/* header nav li.search .search-container input[type="reset"] {
-  background-color: transparent;
-  cursor: pointer;
-  display: none;
-  left: 4px;
-  padding: 0;
-  position: relative;
-  top: 16px;
-} */
 header nav li.search .search-container #close_search {
   background-color: transparent;
   cursor: pointer;
@@ -260,27 +250,9 @@ header nav li.search .search-container #search-submit {
   padding: 0;
   position: relative;
   right: 35px;
-  top: 12px;
+  top: 10px;
 }
-header .navigation-mobile #search-box.focus-search-box ~ #search-submit {
-  right: 0px;
-  top: 4px;
-}
-/* header nav li.search .search-container input[type="submit"] {
-  background-color: transparent;
-  cursor: pointer;
-  display: none;
-  padding: 0;
-  position: relative;
-  right: 35px;
-  top: 12px;
-} */
-header
-  nav
-  li.search
-  form
-  /* input[type="reset"]:has(~ .search-box.focus-search-box), */
-  #close_search:has(~ .search-box.focus-search-box),
+header nav li.search form #close_search:has(~ .search-box.focus-search-box),
 header nav li.search form .search-box.focus-search-box ~ #search-submit {
   display: block;
 }
@@ -367,7 +339,7 @@ header .cagov button {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 41 46" fill="none"><circle cx="16" cy="16" r="15" fill="%23EEEEEE" stroke="%230073A5" stroke-width="2"/><path d="M20.677 17.6212H7.03809V15.3807H20.677L14.4037 9.1074L16 7.53906L24.9619 16.501L16 25.4629L14.4037 23.8946L20.677 17.6212Z" fill="%230073A5"/></svg>');
 }
 .search-svg-small-icon {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none"><circle cx="16.0068" cy="16.9102" r="15" fill="%23EEEEEE" stroke="%2320367C" stroke-width="2"/></svg>');
+  background-image: url('data:image/svg+xml,<svg width="38" height="40" viewBox="0 0 51 54" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16.0068" cy="16.9102" r="15" fill="%23EEEEEE" stroke="%2320367C" stroke-width="2"/><path d="M23.7406 23.3962L19.8169 19.4672C21.7899 16.8996 21.5929 13.1898 19.2251 10.8417C17.932 9.54715 16.2656 8.91016 14.5778 8.91016C12.8899 8.91016 11.2234 9.54627 9.93038 10.8417C7.36565 13.4093 7.36565 17.5793 9.93038 20.1469C11.2235 21.4414 12.8899 22.0784 14.5778 22.0784C15.9804 22.0784 17.3841 21.6395 18.5462 20.7393L22.4914 24.647C22.6669 24.8227 22.8862 24.9102 23.1268 24.9102C23.346 24.9102 23.5875 24.8227 23.7622 24.647C24.0919 24.3178 24.0919 23.7468 23.7408 23.3962H23.7406ZM14.5991 20.3012C13.306 20.3012 12.1216 19.7962 11.2011 18.8969C9.33764 17.0314 9.33764 13.9811 11.2011 12.0932C12.1002 11.1931 13.306 10.689 14.5991 10.689C15.8921 10.689 17.0765 11.1939 17.9971 12.0932C18.9176 12.9934 19.3998 14.2005 19.3998 15.4951C19.3998 16.7896 18.8954 17.9753 17.9971 18.8969C17.0979 19.8185 15.8707 20.3012 14.5991 20.3012V20.3012Z" fill="%2320367C"/></svg>');
   background-repeat: no-repeat;
   border: 0;
   display: block;
@@ -376,7 +348,7 @@ header .cagov button {
   width: 1.5rem;
 }
 .search-svg-small-icon:hover {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none"><circle cx="16" cy="16.9102" r="15" fill="%23EEEEEE" stroke="%230073A5" stroke-width="2"/></svg>');
+  background-image: url('data:image/svg+xml,<svg width="38" height="40" viewBox="0 0 51 54" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16.9102" r="15" fill="%23EEEEEE" stroke="%230073A5" stroke-width="2"/><path d="M23.7337 23.3962L19.81 19.4672C21.7831 16.8996 21.5861 13.1898 19.2183 10.8417C17.9252 9.54715 16.2587 8.91016 14.5709 8.91016C12.8831 8.91016 11.2165 9.54627 9.92354 10.8417C7.35882 13.4093 7.35882 17.5793 9.92354 20.1469C11.2166 21.4414 12.8831 22.0784 14.5709 22.0784C15.9736 22.0784 17.3772 21.6395 18.5393 20.7393L22.4845 24.647C22.6601 24.8227 22.8793 24.9102 23.1199 24.9102C23.3392 24.9102 23.5807 24.8227 23.7553 24.647C24.085 24.3178 24.085 23.7468 23.7339 23.3962H23.7337ZM14.5922 20.3012C13.2991 20.3012 12.1148 19.7962 11.1942 18.8969C9.3308 17.0314 9.3308 13.9811 11.1942 12.0932C12.0934 11.1931 13.2991 10.689 14.5922 10.689C15.8853 10.689 17.0697 11.1939 17.9902 12.0932C18.9108 12.9934 19.3929 14.2005 19.3929 15.4951C19.3929 16.7896 18.8885 17.9753 17.9902 18.8969C17.091 19.8185 15.8639 20.3012 14.5922 20.3012V20.3012Z" fill="%230073A5"/></svg>');
 }
 header .cagov .ca-gov-svg {
   border: 0;

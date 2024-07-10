@@ -3,7 +3,6 @@
 Header for GO site
 
 ```html
-<!-- Header -->
     <header>
       <!-- Mobile -->
       <div class="mobile">
@@ -57,37 +56,31 @@ Header for GO site
                 class="search-container"
                 action="search"
                 id="search-form"
-                autocomplete="off">
+                autocomplete="off"
+                role="search">
+                <button
+                  id="close_search"
+                  class="ca-gov-close-icon-small"></button>
+                <label for="search-box" id="label_search-box">
+                  <span class="sr-only"
+                    >To search the site, enter a search term</span
+                  >
+                </label>
                 <input
                   id="search-box"
                   type="text"
                   class="search-box search-svg"
                   name="q" />
-                <!-- <label for="search-box" class="search-svg">
-              <span class="sr-only">Search</span>
-            </label> -->
-                <input type="submit" id="search-submit" />
+                <button
+                  type="submit"
+                  class="search-submit-icon"
+                  id="search-submit"></button>
               </form>
             </li>
             <!-- Google Translate -->
             <li class="google-translate">
               <a href=""><small>Translate</small></a>
             </li>
-
-            <!-- Start of extra links for testing -->
-            <!-- <li><a href="#" class="active">About</a></li>
-        <li><a href="">Priorities</a></li>
-        <li><a href="">News</a></li>
-        <li><a href="">Join the Administration</a></li>
-        <li><a href="">First Partner</a></li>
-        <li><a href="">Contact</a></li>
-
-        <li><a href="#" class="active">About</a></li>
-        <li><a href="">Priorities</a></li>
-        <li><a href="">News</a></li>
-        <li><a href="">Join the Administration</a></li>
-        <li><a href="">First Partner</a></li>
-        <li><a href="">Contact</a></li> -->
           </ul>
         </nav>
       </div>
