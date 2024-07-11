@@ -1,13 +1,16 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/styles/header.css":
 /*!*******************************!*\
   !*** ./src/styles/header.css ***!
   \*******************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nHookWebpackError: Module build failed (from ./node_modules/@wordpress/scripts/node_modules/postcss-loader/dist/cjs.js):\nSyntaxError\n\n(310:354) C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\src\\styles\\header.css Missed semicolon\n\n \u001b[90m 308 | \u001b[39m\u001b[33m.ca-gov-close-icon-small\u001b[39m \u001b[33m{\u001b[39m\n \u001b[90m 309 | \u001b[39m  \u001b[90m/* background-image: url('data:image/svg+xml,<svg width=\"39\" height=\"35\" viewBox=\"0 0 92 77\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"56\" height=\"56\" transform=\"matrix(-1 0 0 1 56 0)\" fill=\"%2320367C\"/><path d=\"M16.2672 17.34C15.2167 16.2051 16.0216 14.3633 17.568 14.3633V14.3633C18.0619 14.3633 18.5334 14.5693 18.8688 14.9317L40.2443 38.0233C41.2948 39.1581 40.4899 41 38.9434 41V41C38.4496 41 37.9781 40.794 37.6426 40.4316L16.2672 17.34Z\" fill=\"url(%23paint0_linear_3737_31818)\"/><path d=\"M40.2445 17.34C41.295 16.2051 40.4901 14.3633 38.9437 14.3633V14.3633C38.4498 14.3633 37.9784 14.5693 37.6429 14.9317L16.2675 38.0233C15.2169 39.1581 16.0218 41 17.5683 41V41C18.0621 41 18.5336 40.794 18.8691 40.4316L40.2445 17.34Z\" fill=\"white\"/><defs><linearGradient id=\"paint0_linear_3737_31818\" x1=\"15.1398\" y1=\"14.3633\" x2=\"34.7915\" y2=\"43.647\" gradientUnits=\"userSpaceOnUse\"><stop stop-color=\"white\"/><stop offset=\"0.424604\" stop-color=\"%2320367C\"/><stop offset=\"0.621848\" stop-color=\"%2320367C\"/><stop offset=\"1\" stop-color=\"white\" stop-opacity=\"0.95935\"/></linearGradient></defs></svg>'); */\u001b[39m\n\u001b[1m\u001b[31m>\u001b[39m\u001b[22m\u001b[90m 310 | \u001b[39m  background-image\u001b[33m:\u001b[39m \u001b[36murl\u001b[39m\u001b[36m(\u001b[39m\u001b[32m'data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"15\" height=\"14\" viewBox=\"0 0 15 14\" fill=\"none\"><path d=\"M2.15527 0.984375L12.8178 12.2422\" stroke=\"%2320367C\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M13.1152 1.20703L1.85742 12.0237\" stroke=\"%2320367C\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>'\u001b[39m\u001b[36m)\u001b[39m\n \u001b[90m     | \u001b[39m                                                                                                                                                                                                                                                                                                                                                                 \u001b[1m\u001b[31m^\u001b[39m\u001b[22m\n \u001b[90m 311 | \u001b[39m\n \u001b[90m 312 | \u001b[39m  background-repeat\u001b[33m:\u001b[39m no-repeat\u001b[33m;\u001b[39m\n\n    at tryRunOrWebpackError (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\HookWebpackError.js:88:9)\n    at __webpack_require_module__ (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\Compilation.js:5246:12)\n    at __webpack_require__ (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\Compilation.js:5203:18)\n    at C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\Compilation.js:5275:20\n    at symbolIterator (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\neo-async\\async.js:3485:9)\n    at done (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\neo-async\\async.js:3527:9)\n    at Hook.eval [as callAsync] (eval at create (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\tapable\\lib\\Hook.js:18:14)\n    at C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\Compilation.js:5181:43\n    at symbolIterator (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\neo-async\\async.js:3482:9)\n    at timesSync (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\neo-async\\async.js:2297:7)\n    at Object.eachLimit (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\neo-async\\async.js:3463:5)\n    at C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\Compilation.js:5143:16\n    at symbolIterator (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\neo-async\\async.js:3485:9)\n    at timesSync (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\neo-async\\async.js:2297:7)\n    at Object.eachLimit (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\neo-async\\async.js:3463:5)\n    at C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\Compilation.js:5111:15\n    at symbolIterator (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\neo-async\\async.js:3485:9)\n    at done (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\neo-async\\async.js:3527:9)\n    at C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\Compilation.js:5057:8\n    at C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\Compilation.js:3495:6\n    at C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\HookWebpackError.js:68:3\n    at Hook.eval [as callAsync] (eval at create (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:6:1)\n    at Cache.store (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\Cache.js:113:20)\n    at ItemCacheFacade.store (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\CacheFacade.js:141:15)\n    at C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\Compilation.js:3494:11\n    at C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\Cache.js:99:5\n    at Hook.eval [as callAsync] (eval at create (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:6:1)\n    at Cache.get (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\Cache.js:81:18)\n    at ItemCacheFacade.get (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\CacheFacade.js:115:15)\n    at Compilation._codeGenerationModule (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\Compilation.js:3462:9)\n    at codeGen (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\Compilation.js:5045:11)\n    at symbolIterator (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\neo-async\\async.js:3482:9)\n    at timesSync (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\neo-async\\async.js:2297:7)\n    at Object.eachLimit (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\neo-async\\async.js:3463:5)\n    at C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\Compilation.js:5075:14\n    at processQueue (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\util\\processAsyncTree.js:61:4)\n    at processTicksAndRejections (node:internal/process/task_queues:78:11)\n-- inner error --\nError: Module build failed (from ./node_modules/@wordpress/scripts/node_modules/postcss-loader/dist/cjs.js):\nSyntaxError\n\n(310:354) C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\src\\styles\\header.css Missed semicolon\n\n \u001b[90m 308 | \u001b[39m\u001b[33m.ca-gov-close-icon-small\u001b[39m \u001b[33m{\u001b[39m\n \u001b[90m 309 | \u001b[39m  \u001b[90m/* background-image: url('data:image/svg+xml,<svg width=\"39\" height=\"35\" viewBox=\"0 0 92 77\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"56\" height=\"56\" transform=\"matrix(-1 0 0 1 56 0)\" fill=\"%2320367C\"/><path d=\"M16.2672 17.34C15.2167 16.2051 16.0216 14.3633 17.568 14.3633V14.3633C18.0619 14.3633 18.5334 14.5693 18.8688 14.9317L40.2443 38.0233C41.2948 39.1581 40.4899 41 38.9434 41V41C38.4496 41 37.9781 40.794 37.6426 40.4316L16.2672 17.34Z\" fill=\"url(%23paint0_linear_3737_31818)\"/><path d=\"M40.2445 17.34C41.295 16.2051 40.4901 14.3633 38.9437 14.3633V14.3633C38.4498 14.3633 37.9784 14.5693 37.6429 14.9317L16.2675 38.0233C15.2169 39.1581 16.0218 41 17.5683 41V41C18.0621 41 18.5336 40.794 18.8691 40.4316L40.2445 17.34Z\" fill=\"white\"/><defs><linearGradient id=\"paint0_linear_3737_31818\" x1=\"15.1398\" y1=\"14.3633\" x2=\"34.7915\" y2=\"43.647\" gradientUnits=\"userSpaceOnUse\"><stop stop-color=\"white\"/><stop offset=\"0.424604\" stop-color=\"%2320367C\"/><stop offset=\"0.621848\" stop-color=\"%2320367C\"/><stop offset=\"1\" stop-color=\"white\" stop-opacity=\"0.95935\"/></linearGradient></defs></svg>'); */\u001b[39m\n\u001b[1m\u001b[31m>\u001b[39m\u001b[22m\u001b[90m 310 | \u001b[39m  background-image\u001b[33m:\u001b[39m \u001b[36murl\u001b[39m\u001b[36m(\u001b[39m\u001b[32m'data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"15\" height=\"14\" viewBox=\"0 0 15 14\" fill=\"none\"><path d=\"M2.15527 0.984375L12.8178 12.2422\" stroke=\"%2320367C\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M13.1152 1.20703L1.85742 12.0237\" stroke=\"%2320367C\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>'\u001b[39m\u001b[36m)\u001b[39m\n \u001b[90m     | \u001b[39m                                                                                                                                                                                                                                                                                                                                                                 \u001b[1m\u001b[31m^\u001b[39m\u001b[22m\n \u001b[90m 311 | \u001b[39m\n \u001b[90m 312 | \u001b[39m  background-repeat\u001b[33m:\u001b[39m no-repeat\u001b[33m;\u001b[39m\n\n    at Object.<anonymous> (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\@wordpress\\scripts\\node_modules\\css-loader\\dist\\cjs.js??ruleSet[1].rules[2].use[1]!C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\@wordpress\\scripts\\node_modules\\postcss-loader\\dist\\cjs.js??ruleSet[1].rules[2].use[2]!C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\src\\styles\\header.css:1:7)\n    at C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\javascript\\JavascriptModulesPlugin.js:456:10\n    at Hook.eval [as call] (eval at create (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\tapable\\lib\\HookCodeFactory.js:19:10), <anonymous>:7:1)\n    at Hook.CALL_DELEGATE [as _call] (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\tapable\\lib\\Hook.js:14:14)\n    at C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\Compilation.js:5248:39\n    at tryRunOrWebpackError (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\HookWebpackError.js:83:7)\n    at __webpack_require_module__ (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\Compilation.js:5246:12)\n    at __webpack_require__ (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\Compilation.js:5203:18)\n    at C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\Compilation.js:5275:20\n    at symbolIterator (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\neo-async\\async.js:3485:9)\n    at done (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\neo-async\\async.js:3527:9)\n    at Hook.eval [as callAsync] (eval at create (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\tapable\\lib\\Hook.js:18:14)\n    at C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\Compilation.js:5181:43\n    at symbolIterator (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\neo-async\\async.js:3482:9)\n    at timesSync (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\neo-async\\async.js:2297:7)\n    at Object.eachLimit (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\neo-async\\async.js:3463:5)\n    at C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\Compilation.js:5143:16\n    at symbolIterator (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\neo-async\\async.js:3485:9)\n    at timesSync (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\neo-async\\async.js:2297:7)\n    at Object.eachLimit (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\neo-async\\async.js:3463:5)\n    at C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\Compilation.js:5111:15\n    at symbolIterator (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\neo-async\\async.js:3485:9)\n    at done (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\neo-async\\async.js:3527:9)\n    at C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\Compilation.js:5057:8\n    at C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\Compilation.js:3495:6\n    at C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\HookWebpackError.js:68:3\n    at Hook.eval [as callAsync] (eval at create (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:6:1)\n    at Cache.store (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\Cache.js:113:20)\n    at ItemCacheFacade.store (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\CacheFacade.js:141:15)\n    at C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\Compilation.js:3494:11\n    at C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\Cache.js:99:5\n    at Hook.eval [as callAsync] (eval at create (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:6:1)\n    at Cache.get (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\Cache.js:81:18)\n    at ItemCacheFacade.get (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\CacheFacade.js:115:15)\n    at Compilation._codeGenerationModule (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\Compilation.js:3462:9)\n    at codeGen (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\Compilation.js:5045:11)\n    at symbolIterator (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\neo-async\\async.js:3482:9)\n    at timesSync (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\neo-async\\async.js:2297:7)\n    at Object.eachLimit (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\neo-async\\async.js:3463:5)\n    at C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\Compilation.js:5075:14\n    at processQueue (C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\webpack\\lib\\util\\processAsyncTree.js:61:4)\n    at processTicksAndRejections (node:internal/process/task_queues:78:11)\n\nGenerated code for C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\@wordpress\\scripts\\node_modules\\css-loader\\dist\\cjs.js??ruleSet[1].rules[2].use[1]!C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\node_modules\\@wordpress\\scripts\\node_modules\\postcss-loader\\dist\\cjs.js??ruleSet[1].rules[2].use[2]!C:\\Users\\jong6\\source\\CDT\\GO-redesign-dev\\components\\header\\src\\styles\\header.css\n1 | throw new Error(\"Module build failed (from ./node_modules/@wordpress/scripts/node_modules/postcss-loader/dist/cjs.js):\\nSyntaxError\\n\\n(310:354) C:\\\\Users\\\\jong6\\\\source\\\\CDT\\\\GO-redesign-dev\\\\components\\\\header\\\\src\\\\styles\\\\header.css Missed semicolon\\n\\n \\u001b[90m 308 | \\u001b[39m\\u001b[33m.ca-gov-close-icon-small\\u001b[39m \\u001b[33m{\\u001b[39m\\n \\u001b[90m 309 | \\u001b[39m  \\u001b[90m/* background-image: url('data:image/svg+xml,<svg width=\\\"39\\\" height=\\\"35\\\" viewBox=\\\"0 0 92 77\\\" fill=\\\"none\\\" xmlns=\\\"http://www.w3.org/2000/svg\\\"><rect width=\\\"56\\\" height=\\\"56\\\" transform=\\\"matrix(-1 0 0 1 56 0)\\\" fill=\\\"%2320367C\\\"/><path d=\\\"M16.2672 17.34C15.2167 16.2051 16.0216 14.3633 17.568 14.3633V14.3633C18.0619 14.3633 18.5334 14.5693 18.8688 14.9317L40.2443 38.0233C41.2948 39.1581 40.4899 41 38.9434 41V41C38.4496 41 37.9781 40.794 37.6426 40.4316L16.2672 17.34Z\\\" fill=\\\"url(%23paint0_linear_3737_31818)\\\"/><path d=\\\"M40.2445 17.34C41.295 16.2051 40.4901 14.3633 38.9437 14.3633V14.3633C38.4498 14.3633 37.9784 14.5693 37.6429 14.9317L16.2675 38.0233C15.2169 39.1581 16.0218 41 17.5683 41V41C18.0621 41 18.5336 40.794 18.8691 40.4316L40.2445 17.34Z\\\" fill=\\\"white\\\"/><defs><linearGradient id=\\\"paint0_linear_3737_31818\\\" x1=\\\"15.1398\\\" y1=\\\"14.3633\\\" x2=\\\"34.7915\\\" y2=\\\"43.647\\\" gradientUnits=\\\"userSpaceOnUse\\\"><stop stop-color=\\\"white\\\"/><stop offset=\\\"0.424604\\\" stop-color=\\\"%2320367C\\\"/><stop offset=\\\"0.621848\\\" stop-color=\\\"%2320367C\\\"/><stop offset=\\\"1\\\" stop-color=\\\"white\\\" stop-opacity=\\\"0.95935\\\"/></linearGradient></defs></svg>'); */\\u001b[39m\\n\\u001b[1m\\u001b[31m>\\u001b[39m\\u001b[22m\\u001b[90m 310 | \\u001b[39m  background-image\\u001b[33m:\\u001b[39m \\u001b[36murl\\u001b[39m\\u001b[36m(\\u001b[39m\\u001b[32m'data:image/svg+xml,<svg xmlns=\\\"http://www.w3.org/2000/svg\\\" width=\\\"15\\\" height=\\\"14\\\" viewBox=\\\"0 0 15 14\\\" fill=\\\"none\\\"><path d=\\\"M2.15527 0.984375L12.8178 12.2422\\\" stroke=\\\"%2320367C\\\" stroke-width=\\\"2\\\" stroke-linecap=\\\"round\\\"/><path d=\\\"M13.1152 1.20703L1.85742 12.0237\\\" stroke=\\\"%2320367C\\\" stroke-width=\\\"2\\\" stroke-linecap=\\\"round\\\"/></svg>'\\u001b[39m\\u001b[36m)\\u001b[39m\\n \\u001b[90m     | \\u001b[39m                                                                                                                                                                                                                                                                                                                                                                 \\u001b[1m\\u001b[31m^\\u001b[39m\\u001b[22m\\n \\u001b[90m 311 | \\u001b[39m\\n \\u001b[90m 312 | \\u001b[39m  background-repeat\\u001b[33m:\\u001b[39m no-repeat\\u001b[33m;\\u001b[39m\\n\");");
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
 
 /***/ }),
 
@@ -17,7 +20,6 @@ throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugi
   \**************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 window.addEventListener("load", () => {
   const sidebarToggle = document.querySelector("header #caGov");
@@ -122,7 +124,6 @@ window.addEventListener("load", () => {
   \*******************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* eslint-disable yoda */
 window.addEventListener("load", () => {
@@ -392,7 +393,6 @@ window.addEventListener("load", () => {
   \**************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 window.addEventListener("DOMContentLoaded", () => {
   /* eslint-disable no-lonely-if */
@@ -467,32 +467,68 @@ const backToTopFunction = event => {
   \*******************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 window.addEventListener("load", () => {
   const searchSVG = document.querySelector("header .search-svg");
   const searchInput = document.querySelector("header #search-box");
   const resetInputButton = document.querySelector(".ca-gov-close-icon-small");
   const submitInputButton = document.querySelector(".search-submit-icon");
+  const submitButton = document.querySelector("#search-submit");
+
+  // Set appropriate icon if search input has a search term
+  const updateSearchBox = () => {
+    if (searchInput.value === "") {
+      submitInputButton.classList.remove("search-submit-icon");
+      submitInputButton.classList.add("search-svg-small-icon");
+    } else {
+      submitInputButton.classList.remove("search-svg-small-icon");
+      submitInputButton.classList.add("search-submit-icon");
+    }
+  };
   if (!searchInput) return;
 
-  // document.addEventListener("click", e => {
-  //   console.log(e.target);
-  //   console.log(e.target.nodeName);
+  // Always keep placeholder text for mobile
+  if (window.innerWidth < 1080) {
+    searchInput.placeholder = "Search";
+  }
+  updateSearchBox();
 
-  //   if (window.innerWidth > 1080) {
-  //     if (searchInput.classList.contains("focus-search-box")) {
-  //       console.log("Has focus-search-box");
-  //       console.log(e.target?.nodeName);
-  //       if (e.target?.nodeName !== "FORM" || e.target?.nodeName !== "FORM") {
-  //         searchInput.classList.remove("focus-search-box");
-  //         searchInput.value = "";
-  //         searchInput.placeholder = "";
-  //       }
-  //     }
-  //   }
-  // });
+  // Fire update on search box expansion
+  searchSVG.addEventListener("click", () => {
+    updateSearchBox();
+  });
 
+  // Fire update on keyup
+  document.addEventListener("keyup", () => {
+    updateSearchBox();
+  });
+
+  // Close search box on pressing ESC
+  document.addEventListener("keyup", e => {
+    if (window.innerWidth > 1080 && e.key === "Escape") {
+      e.stopPropagation();
+      searchInput.classList.remove("focus-search-box");
+      searchInput.value = "";
+      searchInput.placeholder = "";
+    }
+    // Submit search on pressing Enter
+    if (e.key === "Enter") {
+      submitButton.click();
+    }
+  });
+
+  // Close search box and remove value on reset click
+  resetInputButton.addEventListener("click", e => {
+    e.preventDefault();
+    if (window.innerWidth > 1080) {
+      searchInput.classList.remove("focus-search-box");
+      searchInput.placeholder = "";
+    }
+    searchInput.value = "";
+    searchInput.placeholder = "Search";
+  });
+
+  // Open search box and set placeholder on magnifying glass icon click
   searchSVG.addEventListener("click", () => {
     searchInput.focus();
     if (window.innerWidth > 1080) {
@@ -502,13 +538,18 @@ window.addEventListener("load", () => {
       }
     }
   });
+
+  // Open search box and set placeholder on search input focus
   searchInput.addEventListener("focus", () => {
+    updateSearchBox();
     searchInput.focus();
     if (window.innerWidth > 1080) {
       searchInput.classList.add("focus-search-box");
       searchInput.placeholder = "Search";
     }
   });
+
+  // Close search box, remove placeholder, and remove value on search input focusout
   searchInput.addEventListener("focusout", e => {
     if (window.innerWidth > 1080 && e.target?.nodeName !== "INPUT") {
       console.log(e.target.nodeName);
@@ -517,6 +558,8 @@ window.addEventListener("load", () => {
       searchInput.placeholder = "";
     }
   });
+
+  // Close search box, remove placeholder, and remove value on reset button focusout
   resetInputButton.addEventListener("focusout", e => {
     if (window.innerWidth > 1080 && e.relatedTarget?.nodeName !== "INPUT") {
       console.log(e.target.nodeName);
@@ -525,6 +568,8 @@ window.addEventListener("load", () => {
       searchInput.placeholder = "";
     }
   });
+
+  // Close search box, remove placeholder, and remove value on submit button focusout
   submitInputButton.addEventListener("focusout", e => {
     if (window.innerWidth > 1080 && e.relatedTarget?.nodeName !== "INPUT") {
       console.log(e.target.nodeName);
@@ -577,9 +622,6 @@ window.addEventListener("load", () => {
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
-(() => {
-"use strict";
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
@@ -596,8 +638,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // Styles
-
-})();
 
 /******/ })()
 ;

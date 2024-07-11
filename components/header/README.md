@@ -3,7 +3,7 @@
 Header for GO site
 
 ```html
-    <header>
+        <header>
       <!-- Mobile -->
       <div class="mobile">
         <button
@@ -54,9 +54,9 @@ Header for GO site
             <li class="search">
               <form
                 class="search-container"
-                action="search"
                 id="search-form"
                 autocomplete="off"
+                action="search"
                 role="search">
                 <button
                   id="close_search"

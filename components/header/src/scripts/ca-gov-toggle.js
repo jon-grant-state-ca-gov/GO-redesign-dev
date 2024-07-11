@@ -15,11 +15,11 @@ window.addEventListener("load", () => {
 
   sidebarToggle.addEventListener("keydown", e => {
     if (13 === e.keyCode) {
-      toggleCaGovMenu;
+      toggleCaGovMenu();
     }
 
     if (32 === e.keyCode) {
-      toggleCaGovMenu;
+      toggleCaGovMenu();
     }
   });
 

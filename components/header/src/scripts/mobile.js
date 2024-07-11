@@ -115,7 +115,11 @@ window.addEventListener("load", () => {
     ) {
       if (e.key === "Escape") {
         e.stopPropagation();
-        closeHamburgerMenu();
+        if (searchBox.value.length > 0) {
+          searchBox.value = "";
+        } else {
+          closeHamburgerMenu();
+        }
       }
 
       // only if navToggle is focused and nav is open and tab key is pressed and shift is not pressed

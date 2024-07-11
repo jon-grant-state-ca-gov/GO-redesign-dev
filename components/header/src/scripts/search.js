@@ -1,4 +1,5 @@
 window.addEventListener("load", () => {
+  const searchForm = document.querySelector("#search-form");
   const searchSVG = document.querySelector("header .search-svg");
   const searchInput = document.querySelector("header #search-box");
   const resetInputButton = document.querySelector(".ca-gov-close-icon-small");
@@ -7,13 +8,33 @@ window.addEventListener("load", () => {
 
   // Set appropriate icon if search input has a search term
   const updateSearchBox = () => {
-    if (searchInput.value === "") {
-      submitInputButton.classList.remove("search-submit-icon");
-      submitInputButton.classList.add("search-svg-small-icon");
+    if (searchInput?.value === "") {
+      submitInputButton?.classList.remove("search-submit-icon");
+      submitInputButton?.classList.add("search-svg-small-icon");
     } else {
-      submitInputButton.classList.remove("search-svg-small-icon");
-      submitInputButton.classList.add("search-submit-icon");
+      submitInputButton?.classList.remove("search-svg-small-icon");
+      submitInputButton?.classList.add("search-submit-icon");
     }
+  };
+
+  // Close search box and hide search term
+  const closeSearchBox = () => {
+    searchInput?.classList.remove("focus-search-box");
+    searchInput.placeholder = "";
+    searchInput.style.color = "transparent";
+  };
+
+  // Open search box and display search term
+  const openSearchBox = () => {
+    searchInput?.classList.add("focus-search-box");
+    searchInput.style.color = "#000000";
+    searchInput.placeholder = "Search";
+  };
+
+  // Clears search term and resets placeholder text
+  const clearSearchBox = () => {
+    searchInput.value = "";
+    searchInput.placeholder = "Search";
   };
 
   if (!searchInput) return;
@@ -22,8 +43,6 @@ window.addEventListener("load", () => {
   if (window.innerWidth < 1080) {
     searchInput.placeholder = "Search";
   }
-
-  updateSearchBox();
 
   // Fire update on search box expansion
   searchSVG.addEventListener("click", () => {
@@ -35,40 +54,83 @@ window.addEventListener("load", () => {
     updateSearchBox();
   });
 
-  // Close search box on pressing ESC
-  document.addEventListener("keyup", e => {
-    if (window.innerWidth > 1080 && e.key === "Escape") {
-      e.stopPropagation();
-      searchInput.classList.remove("focus-search-box");
-      searchInput.value = "";
-      searchInput.placeholder = "";
-    }
-    // Submit search on pressing Enter
-    if (e.key === "Enter") {
-      submitButton.click();
+  // Clear search term on pressing ESC
+  searchForm.addEventListener("keyup", e => {
+    if (e.key === "Escape") {
+      e.preventDefault();
+      clearSearchBox();
+      updateSearchBox();
     }
   });
 
-  // Close search box and remove value on reset click
-  resetInputButton.addEventListener("click", e => {
-    e.preventDefault();
-    if (window.innerWidth > 1080) {
-      searchInput.classList.remove("focus-search-box");
-      searchInput.placeholder = "";
+  // Keydown behavior for search elements
+  // Pressing Enter on the X button:
+  // -Desktop = close search box, hide search term
+  // -Mobile = clear search term
+  // Pressing Enter on the Submit button:
+  // Only submit if search term is present
+  searchForm.addEventListener("keydown", e => {
+    if (e.key === "Enter") {
+      if (e.target.id === "close_search") {
+        if (window.innerWidth > 1080) {
+          closeSearchBox();
+        } else {
+          clearSearchBox();
+        }
+        updateSearchBox();
+        e.preventDefault();
+        return false;
+      }
+      if (e.target.id === "search-submit" && searchInput.value.length > 0) {
+        e.preventDefault();
+        searchForm.submit();
+      }
+      if (searchInput.value.length <= 0) {
+        console.log(searchInput.value);
+        e.preventDefault();
+        return false;
+      } else {
+        e.preventDefault();
+        searchForm.submit();
+      }
     }
-    searchInput.value = "";
-    searchInput.placeholder = "Search";
+  });
+
+  // Close search box and hide search term on desktop click
+  // Clear search term on mobile click
+  resetInputButton.addEventListener("click", e => {
+    if (window.innerWidth > 1080) {
+      closeSearchBox();
+    } else {
+      clearSearchBox();
+    }
+    updateSearchBox();
+    e.preventDefault();
+  });
+
+  // Submit form on click only if search term is present
+  submitButton.addEventListener("click", e => {
+    console.log(e.target);
+    if (searchInput.value.length <= 0) {
+      console.log(searchInput.value);
+      e.preventDefault();
+      return false;
+    } else {
+      e.preventDefault();
+      searchForm.submit();
+    }
   });
 
   // Open search box and set placeholder on magnifying glass icon click
-  searchSVG.addEventListener("click", () => {
-    searchInput.focus();
+  searchSVG.addEventListener("click", e => {
+    updateSearchBox();
+    searchInput?.focus();
     if (window.innerWidth > 1080) {
       if (!searchInput.classList.contains("focus-search-box")) {
-        searchInput.classList.add("focus-search-box");
-        searchInput.placeholder = "Search";
+        openSearchBox();
       }
     }
+    e.preventDefault();
   });
 
   // Open search box and set placeholder on search input focus
@@ -76,38 +138,28 @@ window.addEventListener("load", () => {
     updateSearchBox();
     searchInput.focus();
     if (window.innerWidth > 1080) {
-      searchInput.classList.add("focus-search-box");
-      searchInput.placeholder = "Search";
+      openSearchBox();
     }
   });
 
   // Close search box, remove placeholder, and remove value on search input focusout
   searchInput.addEventListener("focusout", e => {
     if (window.innerWidth > 1080 && e.target?.nodeName !== "INPUT") {
-      console.log(e.target.nodeName);
-      searchInput.classList.remove("focus-search-box");
-      searchInput.value = "";
-      searchInput.placeholder = "";
+      closeSearchBox();
     }
   });
 
   // Close search box, remove placeholder, and remove value on reset button focusout
   resetInputButton.addEventListener("focusout", e => {
     if (window.innerWidth > 1080 && e.relatedTarget?.nodeName !== "INPUT") {
-      console.log(e.target.nodeName);
-      searchInput.classList.remove("focus-search-box");
-      searchInput.value = "";
-      searchInput.placeholder = "";
+      closeSearchBox();
     }
   });
 
   // Close search box, remove placeholder, and remove value on submit button focusout
   submitInputButton.addEventListener("focusout", e => {
     if (window.innerWidth > 1080 && e.relatedTarget?.nodeName !== "INPUT") {
-      console.log(e.target.nodeName);
-      searchInput.classList.remove("focus-search-box");
-      searchInput.value = "";
-      searchInput.placeholder = "";
+      closeSearchBox();
     }
   });
 });
