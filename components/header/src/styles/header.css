@@ -235,22 +235,24 @@ header .navigation-mobile #search-box.focus-search-box {
   width: 80vw;
 }
 header nav li.search .search-container #close_search {
+  align-self: center;
   background-color: transparent;
   cursor: pointer;
   display: none;
   left: -11px;
   padding: 0;
   position: relative;
-  top: 16px;
+  /* top: 16px; */
 }
 header nav li.search .search-container #search-submit {
+  align-self: center;
   background-color: transparent;
   cursor: pointer;
   display: none;
   padding: 0;
   position: relative;
   right: 35px;
-  top: 10px;
+  /* top: 10px; */
 }
 header nav li.search form #close_search:has(~ .search-box.focus-search-box),
 header nav li.search form .search-box.focus-search-box ~ #search-submit {

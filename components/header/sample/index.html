@@ -69,9 +69,13 @@
                 autocomplete="off"
                 action="search"
                 role="search">
+                <label for="close_search" id="label_close_search">
+                  <span class="sr-only">Close the search box</span>
+                </label>
                 <button
                   id="close_search"
-                  class="ca-gov-close-icon-small"></button>
+                  class="ca-gov-close-icon-small"
+                  aria-label="Close the search box"></button>
                 <label for="search-box" id="label_search-box">
                   <span class="sr-only"
                     >To search the site, enter a search term</span
@@ -82,9 +86,13 @@
                   type="text"
                   class="search-box search-svg"
                   name="q" />
+                <label for="search-submit" id="label_search-submit">
+                  <span class="sr-only">Submit the search form</span>
+                </label>
                 <button
                   type="submit"
                   class="search-submit-icon"
+                  aria-label="Submit the search form"
                   id="search-submit"></button>
               </form>
             </li>
