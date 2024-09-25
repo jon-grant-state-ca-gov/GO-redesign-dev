@@ -35,6 +35,15 @@ window.addEventListener('load', () => {
     navigation?.classList.add('hidden');
   }
 
+  // Determine icon to display
+  if (window.innerWidth < 1080) {
+    caGovLogo?.classList.remove('desktop-icon');
+    caGovLogo?.classList.add('mobile-icon');
+  } else {
+    caGovLogo?.classList.remove('mobile-icon');
+    caGovLogo?.classList.add('desktop-icon');
+  }
+
   // On resize, make sure to only lock menu scroll when CA gov menu or hamburger menu is open
   const lockMenuScroll = () => {
     if (
@@ -261,6 +270,14 @@ window.addEventListener('load', () => {
   /* we also add the mobile class if screen is smaller than 1080px */
   window.addEventListener('resize', () => {
     curScroll = window.scrollY || doc.scrollTop;
+
+    if (window.innerWidth < 1080) {
+      caGovLogo?.classList.remove('desktop-icon');
+      caGovLogo?.classList.add('mobile-icon');
+    } else {
+      caGovLogo?.classList.remove('mobile-icon');
+      caGovLogo?.classList.add('desktop-icon');
+    }
 
     // Was causing unexpected issues with clicking into search bar
     // Checking if first child may prevent menu close on search box click

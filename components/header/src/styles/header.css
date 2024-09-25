@@ -7,7 +7,7 @@
   background: var(--background-primary-light, #fafafa);
   box-shadow: -4px 4px 4px 0px rgba(0, 0, 0, 0.25);
   display: none;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans';
   height: 90vh;
   line-height: normal;
   overflow-y: auto;
@@ -157,7 +157,7 @@ header nav li.search {
   text-align: right;
   height: 43px;
 }
-header nav li.search .search-container input[type="submit"] {
+header nav li.search .search-container input[type='submit'] {
   display: block;
 }
 header nav li.search .search-close-icon {
@@ -355,6 +355,17 @@ header .cagov button {
 header .cagov .ca-gov-svg {
   border: 0;
 }
+/* New Icons */
+header .ca-gov-svg.desktop-icon {
+  background-image: url('../images/cagov-logo-newsom-gradient.svg');
+  height: 3rem;
+  width: 3rem;
+}
+header .ca-gov-svg.mobile-icon {
+  background-image: url('../images/cagov-icon-newsom-gradient.svg');
+  height: 3rem;
+  width: 3rem;
+}
 header #translate {
   color: var(--go-brand-tahoe-blue, #20367c);
   font-style: normal;
@@ -444,8 +455,8 @@ header .mobile .nav-toggle {
 header .mobile .nav-toggle path {
   transition: d 0.3s;
 }
-header .mobile .nav-toggle[aria-expanded="true"] .menu-icon path {
-  d: path("M3,3 29,29  M3,29 29,3");
+header .mobile .nav-toggle[aria-expanded='true'] .menu-icon path {
+  d: path('M3,3 29,29  M3,29 29,3');
 }
 header.mobile {
   flex: 1;
@@ -536,7 +547,7 @@ header.mobile .navigation-mobile nav ul li.google-translate a {
 }
 
 .return-top::before {
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans';
   font-size: 1.3rem;
   font-weight: 900;
   padding-right: 3px;
