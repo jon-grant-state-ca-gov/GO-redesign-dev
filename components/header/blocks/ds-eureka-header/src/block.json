@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "caweb/ds-eureka-header",
+	"version": "1.3.0",
+	"title": "Ds Eureka Header",
+	"category": "cagov-design-system",
+	"icon": "format-aside",
+	"description": "Ds-eureka-header Gutenberg Block",
+	"example": {
+		"attributes": {}
+	},
+	"attributes": {},
+	"supports": {
+		"html": true
+	},
+	"textdomain": "ds-eureka-header",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php",
+	"viewScript": "file:./frontend.js"
+}

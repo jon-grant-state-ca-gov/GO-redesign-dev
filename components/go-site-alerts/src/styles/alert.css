@@ -1,0 +1,25 @@
+.cagov-alerts {
+  align-items: center;
+  background-color: #fdbc5b;
+  display: flex;
+  justify-content: space-between;
+  min-height: 2rem;
+  padding: 0.5rem 2rem;
+}
+.ca-gov-close-icon {
+  background-color: transparent;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 14 13" fill="none"><path d="M2.15527 0.984375L12.8178 12.2422" stroke="%23242424" stroke-width="2" stroke-linecap="round"/><path d="M13.1152 1.20703L1.85742 12.0237" stroke="%23242424" stroke-width="2" stroke-linecap="round"/></svg>');
+  background-repeat: no-repeat;
+  border: none;
+}
+.cagov-alerts button {
+  cursor: pointer;
+}
+.cagov-alerts .close {
+  height: 1rem;
+  width: 1rem;
+}
+
+.cagov-alerts .alert-level {
+  font-weight: bold;
+}

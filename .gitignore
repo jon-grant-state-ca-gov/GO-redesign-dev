@@ -89,7 +89,7 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
-dist
+# dist
 
 # Gatsby files
 .cache/
@@ -134,3 +134,12 @@ dist
 
 # for this site
 _site
+
+# Global CSS at root
+/*.css
+
+# Public
+**/public
+
+# a11y folder
+**/a11y

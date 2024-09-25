@@ -1,0 +1,39 @@
+{
+  "name": "@cagovweb/go-site-alerts",
+  "version": "0.0.37",
+  "description": "Alerts for GO site update",
+  "type": "module",
+  "main": "dist/style.css",
+  "homepage": "https://jon-grant-state-ca-gov.github.io/GO-redesign-dev/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jon-grant-state-ca-gov/GO-redesign-dev",
+    "directory": "components/alerts"
+  },
+  "bugs": "https://github.com/jon-grant-state-ca-gov/GO-redesign-dev/issues",
+  "author": {
+    "name": "Jon Grant",
+    "email": "jon.grant@state.ca.gov",
+    "url": "https://github.com/jon-grant-state-ca-gov"
+  },
+  "publishConfig": {
+    "access": "public",
+    "tag": "latest"
+  },
+  "license": "ISC",
+  "scripts": {
+    "caweb": "caweb",
+    "build": "caweb build",
+    "serve": "caweb serve",
+    "NPM Publish (dry run)": "npm publish --dry-run",
+    "NPM Publish (view package)": "npm pack",
+    "NPM publish": "npm publish"
+  },
+  "dependencies": {
+    "@cagovweb/go-site-base-css": "^0.0.9",
+    "@caweb/cli": "^1.4.1"
+  },
+  "devDependencies": {
+    "@cagovweb/go-site-header": "^0.0.42"
+  }
+}
