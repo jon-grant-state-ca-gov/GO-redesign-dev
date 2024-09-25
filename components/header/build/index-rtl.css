@@ -1,6 +1,243 @@
-/*!*******************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/@wordpress/scripts/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/@wordpress/scripts/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/styles/header.css ***!
-  \*******************************************************************************************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/@cagovweb/go-site-base-css/build/index.css ***!
+  \*************************************************************************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400..700&display=swap);
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/@cagovweb/go-site-base-css/build/index.css (1) ***!
+  \*****************************************************************************************************************************************************************************************************************/
+:root {
+  /** Palate colors **/
+  --brand-primary: #20367c;
+  --brand-secondary: #1b499b;
+  --banner-light: #d5d9de;
+  --banner-dark: #071645;
+  --brand-hover-light: #009ed3;
+  --brand-hover-dark: #0073a5;
+  --navigation-hover-light: #004972;
+  --navigation-hover-dark: #03334f;
+  --background-primary-light: #fafafa;
+  --background-secondary-light: #f5f3eb;
+  --background-primary-dark: #43433f;
+  --background-secondary-dark: #65645f;
+  --action-primary: #f5821f;
+  --action-secondary: #fdbc5b;
+  --action-alt: #f26522;
+
+  /** Global colors **/
+  --main-white: #fff;
+  --main-dark: #242424;
+  --navigation-submenu-light: #dbdbdb;
+  --navigation-submenu-dark: #6b6b6b;
+  --utility-dark: #111111;
+  --text-dark: #323232;
+  --text-white: #fff;
+  --hyperlink-light: #0057ad;
+  --hyperlink-activated-light: #8a0071;
+  --hyperlink-dark: #87cefa;
+  --hyperlink-activated-dark: #f692b9;
+
+  /** Greys **/
+  --grey: #cccccc;
+  --grey-text: #323232;
+  --grey-background: #eeeeee;
+
+  /** Tokens **/
+  --gutter-gap: 1.674vw;
+  --flow-space: 1rem;
+  --radius: 1rem;
+  --shadow: 0.2rem 0.2rem 0.5em 0 rgba(0, 0, 0, 0.25);
+  --shadow-focus: 0.1rem 0.1rem 0.25em 0 rgba(0, 0, 0, 0.1);
+  --shadow-active: 0.2rem 0.2rem 0.5em 0 rgba(0, 0, 0, 0.6);
+  --background-light: #d5d4c6;
+  --background-dark: #13394b;
+  --action-hover: #278fc0;
+  --action-active: #13394b;
+  --go-brand-golden-state-yellow: #fdbc5b;
+  --go-brand-tahoe-blue: #20367c;
+  --go-brand-radial-gradient: radial-gradient(
+    103.56% 84.2% at 9.9% 25.98%,
+    #20367c 0%,
+    #385ed6 100%
+  );
+
+  /* Change this for overall font size */
+  --fontSize: 1rem;
+  --font-size: 1rem;
+
+  /* Font characteristics */
+  --ratio: 1.24;
+  --s0: calc(var(--fontSize) - 0.3rem) + 0.2vw;
+
+  /* Typography calculations, please do not change */
+
+  /* Small-text to allow for more control */
+  --st: calc(var(--s0) * var(--ratio));
+
+  /* The font size of standard paragraph text */
+  --base: calc(var(--st) * var(--ratio));
+
+  /* ()Lead-text to allow for more control */
+  --lt: calc(var(--base) * var(--ratio));
+  --h6: calc(var(--s0) * var(--ratio));
+  --h5: calc(var(--h6) * var(--ratio));
+  --h4: calc(var(--h5) * var(--ratio));
+  --h3: calc(var(--h4) * var(--ratio));
+  --h2: calc(var(--h3) * var(--ratio));
+  --h1: calc(var(--h2) * var(--ratio) * var(--ratio));
+}
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+
+  & li {
+    margin-block-start: calc(var(--flow-space) + 0.25rem);
+  }
+}
+
+/** BEGIN Main body **/
+body {
+  min-height: 100vh;
+  font-size: clamp(1rem, var(--base), 5rem);
+  flex-direction: column;
+  color: var(--grey-text);
+
+  /* the last font listed is the one used */
+  font-family: "Noto Sans", "Roboto", "Inter", sans-serif;
+  letter-spacing: 0.02rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+blockquote {
+  border-right: rgba(0, 0, 0, 0.12) 2px solid;
+  margin-right: 0;
+  padding-right: calc(2ch + 0.5rem);
+}
+
+/* Focus Styles | thanks Stephanie Eckles */
+:is(a, button, input, textarea, summary) {
+  --outline-size: max(2px, 0.08em);
+  --outline-style: solid;
+  --outline-color: currentColor;
+
+  &:focus {
+    outline: var(--outline-size) var(--outline-style) var(--outline-color);
+    outline-offset: var(--outline-offset, var(--outline-size));
+
+    &:not(:focus-visible) {
+      outline: none;
+    }
+  }
+
+  &:focus-visible {
+    outline: var(--outline-size) var(--outline-style) var(--outline-color);
+    outline-offset: var(--outline-offset, var(--outline-size));
+  }
+}
+
+/** BEGIN Accessibility backward compatibility **/
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/** END Accessibility backward compatibility **/
+
+/** Run-in List CSS **/
+.run-in,
+.run-in li {
+  padding: 0;
+  background: none;
+  display: inline;
+  margin-left: 1rem;
+}
+.run-in li::after {
+  content: "";
+}
+
+.run-in li:last-child::after {
+  content: "";
+}
+
+/** TABLET PORTRAIT UP **/
+@media (min-width: 600px) {
+}
+/** TABLET LANDSCAPE UP **/
+@media (min-width: 900px) {
+}
+/** DESKTOP UP **/
+@media (min-width: 1200px) {
+}
+/** TABLET BIG-DESKTOP UP **/
+@media (min-width: 1800px) {
+}
+
+article > header ~ * {
+  margin-top: 0.15rem;
+}
+
+/**** Sets rule for lead text ****/
+h1 + p {
+  font-size: calc(var(--lt) - 0.02rem);
+  line-height: 1.5;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: var(--h1);
+  line-height: 1.619;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: var(--h2);
+  line-height: 1.619;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: var(--h3);
+  line-height: 1.619;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: var(--h4);
+  line-height: 1.619;
+}
+
+h5 {
+  font-weight: 500;
+  font-size: var(--h5);
+}
+
+li + li {
+  margin-top: 0.5rem;
+}
+
+p {
+  line-height: 1.6;
+}
+
+
+/*!***************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/styles/header.css ***!
+  \***************************************************************************************************************************************************************************/
 /* These need to go in the base css */
 .gray-bg {
   background: var(--grey-background, #eee);
@@ -238,22 +475,24 @@ header .navigation-mobile #search-box.focus-search-box {
   width: 80vw;
 }
 header nav li.search .search-container #close_search {
+  align-self: center;
   background-color: transparent;
   cursor: pointer;
   display: none;
   right: -11px;
   padding: 0;
   position: relative;
-  top: 16px;
+  /* top: 16px; */
 }
 header nav li.search .search-container #search-submit {
+  align-self: center;
   background-color: transparent;
   cursor: pointer;
   display: none;
   padding: 0;
   position: relative;
   left: 35px;
-  top: 10px;
+  /* top: 10px; */
 }
 header nav li.search form #close_search:has(~ .search-box.focus-search-box),
 header nav li.search form .search-box.focus-search-box ~ #search-submit {

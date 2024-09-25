@@ -1,13 +1,13 @@
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener('DOMContentLoaded', () => {
   /* eslint-disable no-lonely-if */
-  const returnTop = document.querySelector(".return-top");
+  const returnTop = document.querySelector('.return-top');
 
   // Add on-click event
-  returnTop.addEventListener("click", goToTopFunction);
+  returnTop.addEventListener('click', goToTopFunction);
 });
 
 function goToTopFunction() {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 
   // document.body.scrollTop = 0; // For Safari
   // document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
@@ -19,32 +19,38 @@ let timer;
 
 let lastScrollTop = 0;
 
+const backToTopFunction = event => {
+  event.preventDefault();
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+};
+
 window.addEventListener(
-  "scroll",
+  'scroll',
   () => {
-    const returnTopButton = document.querySelector(".return-top");
+    const returnTopButton = document.querySelector('.return-top');
     const st = window.pageYOffset || document.documentElement.scrollTop;
     if (st > lastScrollTop) {
       // downscroll code
-      returnTopButton.classList.remove("is-visible");
+      returnTopButton.classList.remove('is-visible');
     } else {
       // upscroll code
       if (
         document.body.scrollTop >= 400 ||
         document.documentElement.scrollTop >= 400
       ) {
-        if (timer != "undefined") {
+        if (timer !== 'undefined') {
           clearTimeout(timer);
         }
-        returnTopButton.classList.add("is-visible");
+        returnTopButton.classList.add('is-visible');
 
         timer = setTimeout(() => {
-          returnTopButton.classList.remove("is-visible");
+          returnTopButton.classList.remove('is-visible');
         }, 2000); //Back to top removes itself after 2 sec of inactivity
       }
       // bottom of the page
       else {
-        returnTopButton.classList.remove("is-visible");
+        returnTopButton.classList.remove('is-visible');
       }
     }
     lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
@@ -54,20 +60,14 @@ window.addEventListener(
 
 // Hittin' rock bottom
 window.onscroll = function () {
-  const returnTopButton = document.querySelector(".return-top");
+  const returnTopButton = document.querySelector('.return-top');
   if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-    returnTopButton.classList.add("is-visible");
+    returnTopButton.classList.add('is-visible');
   }
 };
 
 // Back to top link in the global footer
-const backToTop = document.querySelector("a[href='#skip-to-content']");
+const backToTop = document.querySelector('a[href="#skip-to-content"]');
 if (backToTop) {
-  backToTop.addEventListener("click", backToTopFunction);
+  backToTop.addEventListener('click', backToTopFunction);
 }
-
-const backToTopFunction = event => {
-  event.preventDefault();
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-};

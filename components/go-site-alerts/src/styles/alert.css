@@ -1,73 +1,25 @@
-/* -----------------------------------------
-   ALERT BANNER
-   /source/scss/cagov/alert-banner.scss
------------------------------------------ */
-.alert-banner {
-  margin-bottom: 0;
-  padding: 5px 0;
-  border-radius: 0;
-  -webkit-column-rule: rgba(255, 255, 255, 0.8);
-  -moz-column-rule: rgba(255, 255, 255, 0.8);
-  column-rule: rgba(255, 255, 255, 0.8);
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+.cagov-alerts {
+  align-items: center;
+  background-color: #fdbc5b;
+  display: flex;
+  justify-content: space-between;
+  min-height: 2rem;
+  padding: 0.5rem 2rem;
+}
+.ca-gov-close-icon {
+  background-color: transparent;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 14 13" fill="none"><path d="M2.15527 0.984375L12.8178 12.2422" stroke="%23242424" stroke-width="2" stroke-linecap="round"/><path d="M13.1152 1.20703L1.85742 12.0237" stroke="%23242424" stroke-width="2" stroke-linecap="round"/></svg>');
+  background-repeat: no-repeat;
+  border: none;
+}
+.cagov-alerts button {
+  cursor: pointer;
+}
+.cagov-alerts .close {
+  height: 1rem;
+  width: 1rem;
 }
 
-.alert-banner .close {
-  float: right;
-  background-size: 1.5rem 1.5rem;
-  height: 1.3rem;
-  width: 1.3rem;
-  margin-right: 10px;
-}
-
-.alert-banner .container:after {
-  content: " ";
-  display: table;
-  clear: both;
-}
-
-.alert-level {
-  display: inline-block;
+.cagov-alerts .alert-level {
   font-weight: bold;
-  padding: 0 5px;
-  margin: 0 5px;
-  font-size: 13.92px;
-  font-size: 0.87rem;
-}
-
-.alert-level [class^=ca-gov-icon-] {
-  margin-right: 3px;
-}
-
-.alert-link {
-  line-height: 1.2em;
-  float: right !important;
-  font-weight: 400;
-}
-
-.alert-severe {
-  background: #fdb81e;
-}
-
-.alert-severe .close {
-  color: #000;
-  position: relative;
-  top: 0;
-  right: -5px;
-  padding: 0 10px;
-  text-shadow: none;
-}
-
-.alert-severe .alert-level {
-  color: #000;
-  background: rgba(0, 0, 0, 0.15);
-}
-
-.alert-severe .alert-text {
-  color: #000;
-}
-
-.global-header.compact .alert-banner {
-  display: none;
 }

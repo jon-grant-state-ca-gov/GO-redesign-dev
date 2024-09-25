@@ -6,21 +6,27 @@ Alerts for GO site
   <head>
     <!-- Base CSS References -->
     <link
-    rel="stylesheet"
-    href="../node_modules/@cagovweb/go-site-base-css/build/index.css" />
-
+      rel="stylesheet"
+      href="../node_modules/@cagovweb/go-site-base-css/build/index.css" />
   </head>
-  <body style="height: 2000px;">
-   <!-- Alerts -->
-		<div id="alerts">
-			<div id="alert-0" class="alert-banner">
-				<div class="container">
-					<button data-alert="0" class="close alert-close" aria-label="Close Alert 0"><span aria-hidden="true">×</span></button>
-					<span class="alert-level">
-						<span class="ca-gov-icon-search" aria-hidden="true"></span>A Message from the Director</span>
-					<span>We will not be available today. https://test-vip.sites.ca.gov/caweb</span>
-				</div>
-			</div>
-		</div>
-	</body>
+  <body>
+    <div id="cagov-alerts">
+      <div class="cagov-alerts">
+        <div>
+          <img src="../src/images/red-alert-icon.svg" alt="Red alert circle" />
+          <span class="alert-level">Tune in:</span>
+          <span>
+            <a href="#">
+              Governor Newsom to deliver State of the State Address Tuesday at
+              10 a.m.
+            </a>
+          </span>
+        </div>
+        <button
+          data-alert="0"
+          class="ca-gov-close-icon close"
+          aria-label="Close Alert 0"></button>
+      </div>
+    </div>
+  </body>
 ```

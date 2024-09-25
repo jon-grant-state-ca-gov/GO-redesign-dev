@@ -5,5 +5,6 @@
   "tabWidth": 2,
   "bracketSameLine": true,
   "singleAttributePerLine": false,
-  "embeddedLanguageFormatting": "off"
+  "embeddedLanguageFormatting": "off",
+  "singleQuote": true
 }

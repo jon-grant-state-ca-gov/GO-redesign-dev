@@ -1,6 +1,6 @@
 {
   "name": "@cagovweb/go-site-alerts",
-  "version": "0.0.36",
+  "version": "0.0.37",
   "description": "Alerts for GO site update",
   "type": "module",
   "main": "dist/style.css",
@@ -34,6 +34,6 @@
     "@caweb/cli": "^1.4.1"
   },
   "devDependencies": {
-    "@cagovweb/go-site-header": "^0.0.36"
+    "@cagovweb/go-site-header": "^0.0.42"
   }
 }
