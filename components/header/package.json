@@ -23,7 +23,6 @@
   "license": "ISC",
   "scripts": {
     "caweb": "caweb",
-    "create-block": "cd blocks && caweb create-block",
     "build": "caweb build",
     "serve": "caweb serve --no-selectors --template blank",
     "NPM Publish (dry run)": "npm publish --dry-run",
