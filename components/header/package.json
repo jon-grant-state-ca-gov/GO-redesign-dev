@@ -1,6 +1,6 @@
 {
   "name": "@cagovweb/go-site-header",
-  "version": "0.0.44",
+  "version": "0.0.46",
   "description": "Header for GO site update",
   "type": "module",
   "main": "dist/style.css",
@@ -31,6 +31,6 @@
   },
   "dependencies": {
     "@cagovweb/go-site-base-css": "^0.0.9",
-    "@caweb/cli": "^1.6.1"
+    "@caweb/cli": "^1.6.22"
   }
 }

@@ -358,11 +358,13 @@ header .cagov .ca-gov-svg {
 /* New Icons */
 header .ca-gov-svg.desktop-icon {
   background-image: url('../images/cagov-logo-newsom-gradient.svg');
+  background-repeat: no-repeat;
   height: 3rem;
   width: 3rem;
 }
 header .ca-gov-svg.mobile-icon {
   background-image: url('../images/cagov-icon-newsom-gradient.svg');
+  background-repeat: no-repeat;
   height: 3rem;
   width: 3rem;
 }

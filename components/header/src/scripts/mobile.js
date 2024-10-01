@@ -10,7 +10,6 @@ window.addEventListener('load', () => {
   const sidebar = document.querySelector('.sidebar-container');
   const caGovToggle = document.querySelector('.cagov');
   const caGovLogo = document.getElementById('caGov');
-  const caGovSvg = document.querySelector('.cagov-animated');
   const logo = document.querySelector('.logo');
   const headerNav = navigation.querySelector('ul.navlinks');
   const navSearch = navigation.querySelector('li.search');
@@ -178,7 +177,6 @@ window.addEventListener('load', () => {
       sidebar.style.display = 'none';
       caGovLogo.classList.remove('ca-gov-close-icon');
       caGovLogo.classList.add('ca-gov-svg');
-      caGovSvg.style.display = 'block';
 
       this.ariaExpanded = this.ariaExpanded !== 'true';
 
