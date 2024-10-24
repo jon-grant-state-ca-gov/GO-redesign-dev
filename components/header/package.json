@@ -1,6 +1,6 @@
 {
   "name": "@cagovweb/go-site-header",
-  "version": "0.0.48",
+  "version": "0.0.51",
   "description": "Header for GO site update",
   "type": "module",
   "main": "dist/style.css",
